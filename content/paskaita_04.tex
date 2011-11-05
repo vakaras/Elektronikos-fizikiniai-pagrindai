@@ -1,0 +1,123 @@
+Dielektrikų rūšys:
+\begin{itemize}
+  \item Nepoliniai dielektrikai.
+  \item Poliniai dieleketrikai.
+  \item Kietieji dielektrikai.
+\end{itemize}
+
+\chapter{Elektros srovė. Omo dėsnis.}
+
+\begin{defn}[Elektros srovė]
+  Tvarkingas ir kryptingas judėjimas laisvų elektringų dalelių 
+  (krūvininkų).
+\end{defn}
+
+\begin{defn}[Srovės stipris]
+  Skaliarinis fizikinis dydis lygus:
+  \begin{align*}
+    I = \frac{dq}{dt}.
+  \end{align*}
+  čia $dq$ – krūvio pokytis, $dt$ – laiko pokytis.
+\end{defn}
+
+\begin{defn}[Srovės tankis]
+  \begin{align*}
+    j = \frac{dI}{dS} \left( = \frac{q}{S} \right).
+  \end{align*}
+\end{defn}
+
+Elektros srovės priežastimi negali būti Kuloninės jėgos. Reikia, kad
+krūvininkus veiktų dar ir neelektrostatinės jėgos (pašalinės jėgos).
+
+\begin{defn}[Elektros srovė metaluose]
+  Tai tam tikra tvarka ir kryptimi judantys elektronai. Jie susiduria su
+  apie pusiausvyros padėtį svyruojančiais elektronais ir jonais ir
+  praranda dalį kinetinės energijos.
+\end{defn}
+
+\begin{defn}[Omo dėsnis diferencialinėje formoje]
+  \begin{align*}
+    \vec{j} = \underbrace{en\mu}_{\sigma}\vec{E},
+  \end{align*}
+  čia:
+  \begin{itemize}
+    \item $e$ – elektrono krūvis;
+    \item $n$ – elektrono greitis;
+    \item $\mu$ – elektrono dreifinis greitis;
+    \item $\vec{E}$ – elektrinio lauko stipris;
+    \item $\sigma$ – medžiagos laidumas, atvirkštinis dydis
+      medžiagos varžai $\frac{1}{\rho}$.
+  \end{itemize}
+\end{defn}
+
+\begin{defn}[Varža]
+  \begin{align*}
+    R &= \rho \cdot \frac{l}{S}; \\
+    \rho &= \rho_{0} (1 + \alpha t); \\
+    \alpha &= \frac{\rho - \rho_{0}}{\rho_{0} \cdot t}
+  \end{align*}
+  čia:
+  \begin{itemize}
+    \item $t$ – temperatūra laipsniais ${}^{o}C$;
+    \item $\alpha = 4 \cdot 10^{-3} K^{-1}$ – daugumos grynųjų metalų.
+  \end{itemize}
+\end{defn}
+
+% INCLUDE: Brėžinį iš Audriaus sąsiuvinio. ID=#0001
+
+\begin{align*}
+  U &= I \cdot R
+\end{align*}
+
+\begin{defn}[Vienas voltas]
+  Vienas voltas yra toks potencialų skirtumas tarp dviejų taškų, kai
+  pernešant tarp jų vieno kulono krūvį yra atliekamas vieno Džaulio
+  darbas.
+  \begin{align*}
+    1 V = \frac{1J}{1C}
+  \end{align*}
+\end{defn}
+
+\begin{align*}
+  I &= \frac{U}{R} \\
+  I &= \frac{U}{\rho \frac{l}{S}} \\
+  \frac{I}{S} &= \frac{1}{\rho} \frac{U}{l} \\
+  \vec{j} &= \frac{1}{\rho} \vec{E} \\
+  \vec{j} &= \sigma \cdot \vec{E}
+\end{align*}
+
+\section{Elektros grandinių analizė}
+
+Dvi Kirkofo taisyklės:
+\begin{enumerate}
+  \item Algebrinė suma srovių mazge yra lygi 0. (Krūvio kaupimo mazguose
+    nėra.)
+    \begin{align*}
+      \sum ^{n} _{k=1} I_{k} = 0
+    \end{align*}
+  \item Išsišakojusios elektros grandinės uždarame kontūre (bet koks ciklas 
+    grandinėje) įtampos kritimų kontūro dalyse algebrinė suma yra
+    lygi evj algebrinei sumai visų šaltinių tame kontūre.
+    \begin{align*}
+      \sum _{k=1} ^{n} I_{k} R_{k} = \sum _{i=1} ^{m} E_{i}.
+    \end{align*}
+\end{enumerate}
+
+\begin{exmp}
+  % INCLUDE: Brėžinį iš Audriaus sąsiuvinio. ID=#0002
+  Lygtys mazgams:
+  \begin{align*}
+    A: & -I_{1} - I_{2} - I_{3} + I_{4} &= 0 \\
+    B: & I_{1} + I_{2} + I_{3} - I_{4} &= 0 &
+      \left\{ \text{perteklinė} \right\}
+  \end{align*}
+  
+  Lygtys kontūrams:
+  \begin{align*}
+    +I_{1}r_{1} + I_{1}R_{1} - I_{2}R_{2} - I_{2}r_{2} &=
+      I_{1} (r_{1} + R_{1}) - I_{2} (r_{2} + R_{2}) &=
+      + E_{1} - E_{2} \\
+    I_{1} \left( r_{1} + R_{1} \right) - I_{3} R_{3} = + E_{1} \\
+    I_{3} R_{3} + I_{4} R_{4} = 0
+  \end{align*}
+\end{exmp}

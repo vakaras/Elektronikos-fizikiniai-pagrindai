@@ -1,0 +1,234 @@
+\section{Elektroninė metalų laidumo teorija}
+
+Inercijos jėga:
+\begin{align*}
+  F_{in} &= ma
+\end{align*}
+čia:
+\begin{description}
+  \item[$m$] – masė;
+  \item[$a$] – pagreitis.
+\end{description}
+
+Elektros varomoji jėga:
+\begin{align*}
+  E &= \frac{A_{paš}}{q} \\
+  &= \frac{F_{in} l}{q} \\
+  &= -\frac{mal}{q}
+\end{align*}
+čia:
+\begin{description}
+  \item[$A_{paš}$] – pašalinių jėgų darbas;
+  \item[$q$] – pratekėjęs krūvis;
+  \item[$F_{in}$] – inercijos jėga;
+  \item[$l$] – laidininko ilgis;
+\end{description}
+
+\begin{align*}
+  Q &= I t
+\end{align*}
+čia:
+\begin{description}
+  \item[$I$] – srovės stipris;
+  \item[$t$] – stabdymo trukmė.
+\end{description}
+
+\begin{align*}
+  I &= \frac{E}{R} \\
+  &= -\frac{mal}{Rq}
+\end{align*}
+čia:
+\begin{description}
+  \item[$R$] – laidininkų ir galvanometro varža.
+\end{description}
+
+\begin{align*}
+  a &= \frac{\Delta v}{\Delta t} \\
+  &= \frac{v - v_{0}}{t} \\
+  &= -\frac{v_{0}}{t}
+\end{align*}
+čia:
+\begin{description}
+  \item[$v_{0}$] – pradinis greitis;
+  \item[$t$] – laikas, per kurį buvo sustabdyta.
+\end{description}
+
+\begin{align*}
+  I &= \frac{mlv_{0}}{qRt} \\
+  &= \frac{Q}{t}
+\end{align*}
+čia:
+\begin{description}
+  \item[$\frac{q}{m}$] – savitasis dalelės krūvis.
+\end{description}
+
+\begin{align*}
+  \frac{q}{m} &= \frac{v_{0}l}{QR}
+  &= (1,5 – 1,6) \cdot 10^{11} \tfrac{C}{kg}
+\end{align*}
+
+Palyginimui:
+\begin{align*}
+  \frac{e}{m} &= 1,76 \cdot 10^{11} \tfrac{C}{kg}.
+\end{align*}
+Išvada: juda elektronai.
+
+% Pramiegojau…
+
+\begin{align*}
+  \frac{mv^{2}}{2} &= \frac{3}{2} k T
+\end{align*}
+
+\begin{align*}
+  v_{kv} &= 1,1 \cdot 10^{5} \tfrac{m}{s}
+\end{align*}
+
+Tvarkingo judėjimo greitis:
+\begin{align*}
+  v &\equiv 8 \cdot 10^{-4} \tfrac{m}{s}
+\end{align*}
+
+Vidutinis elektrono greitis (?):
+\begin{align*}
+  \t{ū} &= 10^{6} \tfrac{m}{s}
+\end{align*}
+
+Elektrono greitis:
+\begin{align*}
+  v &= \mu E
+\end{align*}
+
+\chapter{Srovės magnetinis laukas}
+
+Magnetinė indukcija:
+\begin{align*}
+  \vec{B}
+\end{align*}
+
+% INCLUDE: Brėžinį iš Audriaus sąsiuvinio. ID=#0003
+
+\begin{align*}
+  \frac{F_{m}}{|q|v} &= B \t{konstanta}
+\end{align*}
+
+Lorenco jėga:
+\begin{align*}
+  \vec{F_{m}} &= q [\vec{v} \cdot \vec{B}] \\
+  F_{m} &= |q|vB \sin \alpha
+\end{align*}
+
+Jėga elektromagnetiniame lauke:
+\begin{align*}
+  F &= q \vec{E} + q \left[ \vec{v} \cdot \vec{B} \right]
+\end{align*}
+
+Ampero jėga:
+\begin{align*}
+  d \vec{F} &= I \left[ d\vec{l} \cdot B \right]
+\end{align*}
+
+\begin{align*}
+  d \vec{B} &= \frac{\mu_{0}}{4\pi} \frac{I [d \vec{l}\vec{r}]}{r^{3}} \\
+  dB &= \frac{\mu_{0}}{4\pi} \frac{I\cdot dl \sin \alpha}{r^{2}} \\
+  B &= \frac{\mu_{0}I}{4\pi}
+    \int _{(l)} \frac{\left[ d\vec{l} \vec{r} \right]}{r^{3}}
+\end{align*}
+
+\begin{align*}
+  \mu_{0} &= 4 \pi \cdot 10^{-7} \tfrac{Tm}{A} \\
+  &= 4 \pi \cdot 10 ^{-7} \tfrac{H}{m}
+\end{align*}
+
+\begin{align*}
+  r &= \frac{b}{\sin \alpha} \\
+  dl &= \frac{r \cdot d \alpha}{\sin \alpha}
+  &= \frac{b d \alpha}{\sin ^{2} \alpha}
+\end{align*}
+
+\begin{align*}
+  dB &= \frac{\mu_{0}}{4\pi}
+    \frac{I \cdot b \cdot d\alpha \sin \alpha \sin ^{2} \alpha}{
+      b^{2} \cdot \sin ^{2} \alpha} \\
+  \int dB &= \int _{0} ^{\pi} \frac{\mu_{0}}{4\pi} 
+    \frac{I}{b} \sin \alpha d \alpha \\
+  B = \frac{\mu_{0}}{4\pi} \frac{2I}{b}
+\end{align*}
+
+\begin{exmp}
+  % „Kirchofo metodas uzd.pdf“, 2 psl.
+
+  Pirma Kirchofo taisyklė mazgui B:
+  \begin{align*}
+    I_{1} + &I_{2} + &I_{3} - &I_{4} &= 0
+  \end{align*}
+
+  Antra Kirchofo taisyklė:
+  \begin{align*}
+    (r_{1} + R_{1}) I_{1} - (R_{2} + r_{2}) &I_{2} && &= E_{1} - E_{2} \\
+    (R_{2} + r_{2}) &I_{2} - R_{3}&I_{3} & &= E_{2} \\
+    &&R_{3}I_{3} + R_{4}&I_{4} &= 0
+  \end{align*}
+
+  Sprendžiam lygčių sistemą Gauso metodu:
+  \begin{align*}
+    1 & 1 & 1 & -1 & 0 \\
+    2 & -4 & 0 & 0 & 6 \\
+    0 & 4 & -4 & 0 & 4 \\
+    0 & 0 & 4 & 2 & 0 \\
+  \end{align*}
+  \begin{align*}
+    1 & 1 & 1 & -1 & 0 \\
+    0 & -6 & -2 & 2 & 6 \\
+    0 & 4 & -4 & 0 & 4 \\
+    0 & 0 & 4 & 2 & 0 \\
+  \end{align*}
+  \begin{align*}
+    1 & 1 & 1 & -1 & 0 \\
+    0 & -6 & -2 & 2 & 6 \\
+    0 & 0 & -4 & 1 & 6 \\
+    0 & 0 & 4 & 2 & 0 \\
+  \end{align*}
+  \begin{align*}
+    1 & 1 & 1 & -1 & 0 \\
+    0 & -3 & -1 & 1 & 3 \\
+    0 & 0 & 0 & 1 & 2 \\
+    0 & 0 & 2 & 1 & 0 \\
+  \end{align*}
+
+  \begin{align*}
+    I_{4} &= 2 \t{A} \\
+    I_{3} &= -1 \t{A} \\
+    I_{2} &= 0 \t{A} \\
+    I_{1} &= 3 \t{A}
+  \end{align*}
+\end{exmp}
+
+\begin{exmp}
+  % „Kirchhofo grandine.jpg“
+
+  Pirma Kirchofo taisyklė mazgams A, B ir C:
+  \begin{align*}
+    %&I_{1} + &I_{2} + &I_{3} + &I_{4} + &I_{5} + &I_{6} &= 0
+    \t{A:}&  & + &I_{3} - &I_{4} + &I_{5} & &= 0 \\
+    \t{B:} &I_{1} - &I_{2} - &I_{3} &&& &= 0\\
+    \t{C:} &&&  &I_{4} - &I_{5} + &I_{6} &= 0
+  \end{align*}
+
+  Antra Kirchofo taisyklė:
+  \begin{align*}
+    R_{5}-R_{4}&: &&& (R_{4} + r_{3}) &I_{4} + R_{5}&I_{5} & &= E_{3} \\
+    R_{5}-R_{3}-R_{2}-E_{2}&:
+      & R_{2} &I_{2} - R_{3}&I_{3} + R_{5} &I_{5} + r_{2} &I_{6} &= E_{2} \\
+    R_{4}-R_{3}-R_{1}-E_{1}-E_{2}&:
+      -(r_{1} + R_{1}) &I_{1} & - R_{3} &I_{3} -
+      (r_{3} + R_{4})&I_{4} + &r_{2} &I_{6} = -E_{1} + E_{2}
+  \end{align*}
+  \begin{align*}
+    &:                  &             &              &        (R_{4} + r_{3}) &I_{4}  + R_{5}&I_{5} & &= E_{3} \\
+    &:                  &       R_{2} &I_{2}  - R_{3}&I_{3}                           + R_{5}&I_{5} + r_{2} &I_{6} &= E_{2} \\
+    &: -(r_{1} + R_{1}) &I_{1}        &       - R_{3}&I_{3} - (r_{3} + R_{4})&I_{4} + &r_{2} &I_{6} = -E_{1} + E_{2}
+  \end{align*}
+
+  % Trečia su klaidomis.
+  
+\end{exmp}

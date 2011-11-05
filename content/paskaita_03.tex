@@ -1,0 +1,140 @@
+\chapter{Elektrostatika}
+
+\begin{description}
+  \item[$\vec{E}$] – elektrinio lauko stipris;
+  \item[$\vec{D}$] – elektrostatinė indukcija.
+\end{description}
+
+\begin{align*}
+  \vec{E} &= \frac{\vec{F}}{q} \\
+  \vec{D} &= \varepsilon_{0} \varepsilon \vec{E}
+\end{align*}
+
+\begin{defn}[srautas]
+  \begin{equation}
+    \Phi = \vec{E} \cdot \vec{S} \cdot \cos \alpha
+    \label{def:srautas}
+  \end{equation}
+  \begin{description}
+    \item[$\vec{S}$] – plotas (pseudo vektorius, kryptis sutampa su
+      normalės kryptimi);
+    \item[$\vec{E}$] – elektrinio lauko stipris.
+  \end{description}
+\end{defn}
+
+\begin{description}
+  \item[$A$] – darbas;
+  \item[$r$] – kelias.
+\end{description}
+
+\begin{align*}
+  \Psi &= \vec{D} \vec{S} = \sum _{i=1} ^{n} q_{i} \\
+  \Phi &= \oint_{S} \vec{E} d \vec{S} = 
+    \frac{1}{\varepsilon_{0}} \int _{v} \rho dv \\
+  \delta A &= \vec{F} \cdot \vec{d} \cdot r =
+    q \cdot \vec{E} \vec{d} r = -d W p
+\end{align*}
+
+Elektrinio lauko potencialias:
+\begin{align*}
+  \varphi &= \frac{Wp}{q} & \text{vienam taškui} \\
+  \varphi &= \sum ^{n} _{i=1} \frac{q_{i}}{4 \pi \varepsilon_{0} r} 
+    & \text{taškų sistemai}.
+\end{align*}
+
+Darbas perkeliant krūvį iš taško su potencialu $\varphi_{1}$ į tašką
+su potencialu $\varphi_{2}$ lygus:
+\begin{align*}
+  A_{1-2} &= q \cdot (\varphi_{1} - \varphi_{2}) \\
+  \varphi_{1} = \frac{A_{1-2}}{q} & \text{jei $\varphi_{2} = 0$}
+\end{align*}
+
+Matavimo vienetai:
+\begin{align*}
+  1 V = \frac{1 J}{1 C}
+\end{align*}
+Čia:
+\begin{description}
+  \item[$1 V$] – vienas voltas;
+  \item[$1 J$] – vienas džaulis;
+  \item[$1 C$] – vienas kulonas.
+\end{description}
+
+Vienas elektron-voltas:
+\begin{align*}
+  1 eV &= 1,6 \cdot 10^{-19} \cdot 1 &= 1,6 \cdot 10^{-19} J
+\end{align*}
+
+\section{Dielektrikų poliarizacija}
+
+Dielektrikų rūšys:
+\begin{description}
+  \item[nepoliniai dielektrikai] – tie, kurių normaliomis sąlygomis
+    elektronų svorio centras sutampa su elektrono svorio centru.
+  \item[dipoliniai dielektrikai] – tie, kurių elektronų svorio centras
+    ir branduolio svorio centras nesutampa.
+\end{description}
+
+Dipolinis momentas:
+\begin{align*}
+  \vec{p_{e}} &= q \cdot \vec{l}
+\end{align*}
+
+Indukuotą dipolinį elektrinį momentą proporcingą elektrinio lauko stipriui.
+
+Joninė poliarizacija – 
+
+Poliarizacijos vektorius:
+\begin{align*}
+  \vec{P}
+  &= \frac{1}{\Delta V} \sum _{i=1} ^{h} \vec{P}_{ei} \\
+  &= n_{0} \cdot \alpha \cdot \varepsilon_{0} \cdot \vec{E} =
+    \Xi \varepsilon \vec{E_{0}}
+\end{align*}
+
+\begin{align*}
+  E &= E_{0} - E' \\
+  E' &= E_{0} - E = E_{0} - \frac{E_{0}}{\varepsilon} 
+  = E_{0} \left( 1 - \frac{1}{\varepsilon} \right) \\
+  E' &= (\varepsilon - 1)E \\
+  \varepsilon = 1 + \Xi
+\end{align*}
+Čia:
+\begin{description}
+  \item[$E_{0}$] – išorinis laukas;
+  \item[$E'$] – poliarizacijos laukas.
+\end{description}
+
+\subsection{Poliarizacijos histerezė}
+
+Pjezo efektas – spaudžiant medžiagą, turinčią dipolių, dipoliai
+orientuojasi ir medžiagos paviršiuje atsiranda krūviai.
+
+Kristaliniai dialektrikai (dar vadinami signeto arba feroelektrikais) – 
+prie tam tikros temperatūros pasižymi savaimine poliarizacija.
+
+Histerizės kilpa –
+
+\subsection{Kondensatorius}
+
+Elektrinė talpa:
+\begin{align*}
+  C &= \frac{q}{\varphi} \\
+  Q &= CU \\
+  E &= \frac{\varphi_{1} - \varphi_{2}}{d} \\
+  E &= \frac{\sigma}{\varepsilon_{0}\varepsilon} = 
+  \frac{q}{\varepsilon_{0}\varepsilon S} \\
+  \sigma \equiv D &= \varepsilon_{0} \varepsilon E \\
+  c &= \frac{\varepsilon_{0} \varepsilon S}{d}.
+\end{align*}
+Čia:
+\begin{description}
+  \item[$Q$] – krūvis;
+  \item[$C$] – talpa;
+  \item[$U$] – potencialų skirtumas;
+  \item[$d$] – atstumas tarp potencialų;
+\end{description}
+
+\subsection{Laidininkai elektriniame lauke}
+
+Laidininko viduje nėra krūvio.
