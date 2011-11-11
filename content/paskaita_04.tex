@@ -1,15 +1,8 @@
-Dielektrikų rūšys:
-\begin{itemize}
-  \item Nepoliniai dielektrikai.
-  \item Poliniai dieleketrikai.
-  \item Kietieji dielektrikai.
-\end{itemize}
-
-\chapter{Elektros srovė. Omo dėsnis.}
+\section{Elektros srovė. Omo dėsnis.}
 
 \begin{defn}[Elektros srovė]
-  Tvarkingas ir kryptingas judėjimas laisvų elektringų dalelių 
-  (krūvininkų).
+  Tvarkingas ir kryptingas laisvų elektringų dalelių (krūvininkų)
+  judėjimas.
 \end{defn}
 
 \begin{defn}[Srovės stipris]
@@ -58,6 +51,8 @@ krūvininkus veiktų dar ir neelektrostatinės jėgos (pašalinės jėgos).
   \end{align*}
   čia:
   \begin{itemize}
+    \item $\rho$ – laidininko savitoji varža;
+    \item $S$ – laidininko skerspjūvio plotas;
     \item $t$ – temperatūra laipsniais ${}^{o}C$;
     \item $\alpha = 4 \cdot 10^{-3} K^{-1}$ – daugumos grynųjų metalų.
   \end{itemize}
@@ -65,9 +60,14 @@ krūvininkus veiktų dar ir neelektrostatinės jėgos (pašalinės jėgos).
 
 % INCLUDE: Brėžinį iš Audriaus sąsiuvinio. ID=#0001
 
-\begin{align*}
-  U &= I \cdot R
-\end{align*}
+\begin{defn}[Elektrovaros jėga]
+  Darbas perkeliant vienetinė teigiamą krūvį:
+  \begin{equation*}
+    \varepsilon = \frac{A_{\t{pašalinių}}}{q}
+  \end{equation*}
+  Elektrovaros jėgos vienetas yra voltas (kaip ir potencialų skirtumo
+  bei įtampos).
+\end{defn}
 
 \begin{defn}[Vienas voltas]
   Vienas voltas yra toks potencialų skirtumas tarp dviejų taškų, kai
@@ -77,14 +77,6 @@ krūvininkus veiktų dar ir neelektrostatinės jėgos (pašalinės jėgos).
     1 V = \frac{1J}{1C}
   \end{align*}
 \end{defn}
-
-\begin{align*}
-  I &= \frac{U}{R} \\
-  I &= \frac{U}{\rho \frac{l}{S}} \\
-  \frac{I}{S} &= \frac{1}{\rho} \frac{U}{l} \\
-  \vec{j} &= \frac{1}{\rho} \vec{E} \\
-  \vec{j} &= \sigma \cdot \vec{E}
-\end{align*}
 
 \section{Elektros grandinių analizė}
 
@@ -103,21 +95,36 @@ Dvi Kirkofo taisyklės:
     \end{align*}
 \end{enumerate}
 
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[height=0.5\textwidth]{images/grandine1.png}
+  \end{center}
+  \caption{Elektros grandinės analizė}
+  \label{fig:grandine1}
+\end{figure}
+
 \begin{exmp}
-  % INCLUDE: Brėžinį iš Audriaus sąsiuvinio. ID=#0002
-  Lygtys mazgams:
+  Sudarykime lygtis \ref{fig:grandine1} paveikslėlyje pateiktai grandinei.
+  Sudarinėdami lygtis, ženklus nustatome tokiu būdu: jei srovės kryptis
+  sutampa su ėjimo kryptimi, tada rašome $+$, priešingu atveju rašome
+  $-$; jei šaltinį praeiname iš $-$ į $+$, tai rašome $+$, o jei
+  iš $+$ į $-$, tada rašome $-$.
+
+  Lygtys mazgams (kadangi iš viso yra du mazgai A ir B, tai prasmingų
+  lygčių galima sudaryti $2 - 1 = 1$):
   \begin{align*}
     A: & -I_{1} - I_{2} - I_{3} + I_{4} &= 0 \\
     B: & I_{1} + I_{2} + I_{3} - I_{4} &= 0 &
       \left\{ \text{perteklinė} \right\}
   \end{align*}
   
-  Lygtys kontūrams:
+  Lygtys kontūrams (kadangi yra trys elementarieji kontūrai, tai iš
+  viso galime sudaryti 3 prasmingas lygtis):
   \begin{align*}
-    +I_{1}r_{1} + I_{1}R_{1} - I_{2}R_{2} - I_{2}r_{2} &=
+    +I_{1}r_{1} + I_{1}R_{1} - I_{2}R_{2} - I_{2}r_{2} &= \\
       I_{1} (r_{1} + R_{1}) - I_{2} (r_{2} + R_{2}) &=
       + E_{1} - E_{2} \\
-    I_{1} \left( r_{1} + R_{1} \right) - I_{3} R_{3} = + E_{1} \\
-    I_{3} R_{3} + I_{4} R_{4} = 0
+    I_{1} \left( r_{1} + R_{1} \right) - I_{3} R_{3} &= + E_{1} \\
+    I_{3} R_{3} + I_{4} R_{4} &= 0
   \end{align*}
 \end{exmp}
