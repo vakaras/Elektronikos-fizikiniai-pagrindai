@@ -1,10 +1,14 @@
-\section{Elektroninė metalų laidumo teorija}
+\subsection{Elektroninė metalų laidumo teorija}
 
-Metaluose krūvio nešėjai yra elektronai. Pagrindimas:
+Metaluose krūvio nešėjai yra elektronai. Pagrindimas: 
 
-TODO: Suprasti ir perrašyti.
+Elektronas, susidūręs su metalo gardelės jonu, gali pradėti judėti
+bet kuria kryptimi ir po kiekvieno tokio susidūrimo dreifuojančio
+elektrono pradinis greitis yra lygus nuliui. Dėl elektrinio lauko
+poveikio, elektronas pradeda judėti jo veikimo kryptimi ir per laiką
+$t$ vėl sutinka gardelės joną.
 
-Inercijos jėga:
+Elektrono inercijos jėga:
 \begin{equation*}
   F_{\t{in}} = -ma
 \end{equation*}
@@ -14,72 +18,68 @@ Inercijos jėga:
   \item[$a$] – pagreitis.
 \end{description}
 
-Elektros varomoji jėga:
-\begin{align*}
+Elektros šaltinio kuriama elektros varomoji jėga:
+\begin{align}
   E &= \frac{A_{\t{paš}}}{q} \\
+  \intertext{Kadangi darbas yra lygus jėgos ir kelio sandaugai:}
   &= \frac{F_{\t{in}} l}{q} \\
-  &= -\frac{mal}{q}
-\end{align*}
+  &= -\frac{mal}{q} \\
+  \intertext{Pagal apibrėžimą, pagreitis yra greičio pokytis per laiko
+  vienetą. Kadangi, pas mus pradinis greitis yra 0, tai gauname:}
+  &= -\frac{mvl}{qt} \label{eq:metalu_laidumo_1} \\
+\end{align}
 čia:
 \begin{description}
   \item[$A_{\t{paš}}$] – pašalinių jėgų darbas;
   \item[$q$] – pratekėjęs krūvis;
   \item[$F_{\t{in}}$] – inercijos jėga;
   \item[$l$] – laidininko ilgis.
+  \item[$v$] – elektrono per laiką $t$ pasiektas greitis;
+  \item[$t$] – po kiek laiko nuo judėjimo pradžios elektronas sutiko
+    joną.
 \end{description}
 
 Krūvis, kuris prateka laidininku:
-\begin{align*}
-  Q &= I t
-\end{align*}
+\begin{equation}
+  Q = I t \label{eq:metalu_laidumo_3}
+\end{equation}
 čia:
 \begin{description}
-  \item[$I$] – srovės stipris;
-  \item[$t$] – stabdymo laikas (trumpas).
+  \item[$I$] – srovės stipris.
 \end{description}
 
 Iš Omo dėsnio:
-\begin{align*}
+\begin{align}
   I &= \frac{E}{R} \\
-  &= -\frac{mal}{Rq}
-\end{align*}
+  \intertext{Įsistatome \ref{eq:metalu_laidumo_1} ir gauname:}
+  &= -\frac{mal}{Rq} \label{eq:metalu_laidumo_2} \\
+\end{align}
 čia:
 \begin{description}
   \item[$R$] – laidininkų ir galvanometro varža.
 \end{description}
 
-\begin{align*}
-  a &= \frac{\Delta v}{\Delta t} \\
-  &= \frac{v - v_{0}}{t} \\
-  &= -\frac{v_{0}}{t}
-\end{align*}
-čia:
-\begin{description}
-  \item[$v_{0}$] – pradinis greitis;
-  \item[$t$] – laikas, per kurį buvo sustabdyta.
-\end{description}
-
+Sulyginę \ref{eq:metalu_laidumo_2} ir \ref{eq:metalu_laidumo_3}
+gauname:
 \begin{align*}
   I &= \frac{mlv_{0}}{qRt} \\
-  &= \frac{Q}{t}
+  &= \frac{Q}{t} \\
+  \frac{q}{m}
+  &= \frac{v_{0}l}{QR} \\
+  &= (\t{nuo }1,5 \t{ iki } 1,6) \cdot 10^{11} \tfrac{C}{kg}
 \end{align*}
 čia:
 \begin{description}
   \item[$\frac{q}{m}$] – savitasis dalelės krūvis.
 \end{description}
 
-\begin{align*}
-  \frac{q}{m} &= \frac{v_{0}l}{QR} \\
-  &= (1,5 – 1,6) \cdot 10^{11} \tfrac{C}{kg}
-\end{align*}
-
-Palyginimui:
+Gautąjį savitąjį dalelės krūvį palyginę su elektrono:
 \begin{align*}
   \frac{e}{m} &= 1,76 \cdot 10^{11} \tfrac{C}{kg}.
 \end{align*}
-Išvada: juda elektronai.
+galime teigti, jog krūvio nešėjai yra elektronai.
 
-% Pramiegojau…
+TODO: Suprasti ir perrašyti.
 
 \begin{align*}
   \frac{mv^{2}}{2} &= \frac{3}{2} k T
@@ -104,7 +104,7 @@ Elektrono greitis:
   v &= \mu E
 \end{align*}
 
-\chapter{Srovės magnetinis laukas}
+\section{Srovės magnetinis laukas}
 
 Magnetinė indukcija:
 \begin{align*}
