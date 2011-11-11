@@ -80,7 +80,7 @@ krūvininkus veiktų dar ir neelektrostatinės jėgos (pašalinės jėgos).
 
 \subsection{Elektros grandinių analizė}
 
-Dvi Kirkofo taisyklės:
+Dvi Kirchofo taisyklės:
 \begin{enumerate}
   \item Algebrinė suma srovių mazge yra lygi 0. (Krūvio kaupimo mazguose
     nėra.)
@@ -127,4 +127,96 @@ Dvi Kirkofo taisyklės:
     I_{1} \left( r_{1} + R_{1} \right) - I_{3} R_{3} &= + E_{1} \\
     I_{3} R_{3} + I_{4} R_{4} &= 0
   \end{align*}
+\end{exmp}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[height=0.5\textwidth]{images/grandine2.png}
+  \end{center}
+  \caption{Elektros grandinės analizė}
+  \label{fig:grandine2}
+\end{figure}
+
+\begin{exmp}
+  % „Kirchofo metodas uzd.pdf“, 2 psl.
+
+  Į grandinę (žr. \ref{fig:grandine2}) įjungti du šaltiniai $E_{1} =
+  10V, E_{2} = 4V, r_{1} = 0,5 \Omega, r_{2} = 0,5 \Omega$, rezistoriai
+  $R_{1} = 1,5 \Omega, R_{2} = 3,5 \Omega, R_{3} = 4 \Omega,
+  R_{4} = 2 \Omega$. Rasti: $I_{1}, I_{2}, I_{3}$ ir $I_{4}$.
+
+  Kirchofo taisyklės:
+  \begin{align*}
+    \intertext{Pirma Kirchofo taisyklė mazgui B:}
+    \,                &I_{1} + \,               &I_{2} + \,     &I_{3} - \,     &I_{4} &= 0 \\
+    \intertext{Antra Kirchofo taisyklė:}
+    (r_{1} + R_{1})   &I_{1} - (R_{2} + r_{2})  &I_{2} + 0      &I_{3} + 0      &I_{4} &= E_{1} - E_{2} \\
+    0                 &I_{1} + (R_{2} + r_{2})  &I_{2} - R_{3}  &I_{3} + 0      &I_{4} &= E_{2} \\
+    0                 &I_{1} + 0                &I_{2} + R_{3}  &I_{3} + R_{4}  &I_{4} &= 0 \\
+  \end{align*}
+
+  Sprendžiam lygčių sistemą Gauso metodu:
+  \begin{align*}
+    \begin{pmatrix}
+      1 & 1 & 1 & -1 & 0 \\
+      2 & -4 & 0 & 0 & 6 \\
+      0 & 4 & -4 & 0 & 4 \\
+      0 & 0 & 4 & 2 & 0 \\
+    \end{pmatrix},
+    \begin{pmatrix}
+      1 & 1 & 1 & -1 & 0 \\
+      0 & -6 & -2 & 2 & 6 \\
+      0 & 4 & -4 & 0 & 4 \\
+      0 & 0 & 4 & 2 & 0 \\
+    \end{pmatrix},
+    \begin{pmatrix}
+      1 & 1 & 1 & -1 & 0 \\
+      0 & -6 & -2 & 2 & 6 \\
+      0 & 0 & -4 & 1 & 6 \\
+      0 & 0 & 4 & 2 & 0 \\
+    \end{pmatrix},\\
+    \begin{pmatrix}
+      1 & 1 & 1 & -1 & 0 \\
+      0 & -3 & -1 & 1 & 3 \\
+      0 & 0 & 0 & 1 & 2 \\
+      0 & 0 & 2 & 1 & 0 \\
+    \end{pmatrix}
+  \end{align*}
+
+  \begin{align*}
+    I_{4} &= 2 \t{A} \\
+    I_{3} &= -1 \t{A} \\
+    I_{2} &= 0 \t{A} \\
+    I_{1} &= 3 \t{A}
+  \end{align*}
+\end{exmp}
+
+\begin{exmp}
+  % „Kirchhofo grandine.jpg“
+
+  Pirma Kirchofo taisyklė mazgams A, B ir C:
+  \begin{align*}
+    %&I_{1} + &I_{2} + &I_{3} + &I_{4} + &I_{5} + &I_{6} &= 0
+    \t{A:}&  & + &I_{3} - &I_{4} + &I_{5} & &= 0 \\
+    \t{B:} &I_{1} - &I_{2} - &I_{3} &&& &= 0\\
+    \t{C:} &&&  &I_{4} - &I_{5} + &I_{6} &= 0
+  \end{align*}
+
+  Antra Kirchofo taisyklė:
+  \begin{align*}
+    R_{5}-R_{4}&: &&& (R_{4} + r_{3}) &I_{4} + R_{5}&I_{5} & &= E_{3} \\
+    R_{5}-R_{3}-R_{2}-E_{2}&:
+      & R_{2} &I_{2} - R_{3}&I_{3} + R_{5} &I_{5} + r_{2} &I_{6} &= E_{2} \\
+    R_{4}-R_{3}-R_{1}-E_{1}-E_{2}&:
+      -(r_{1} + R_{1}) &I_{1} & - R_{3} &I_{3} -
+      (r_{3} + R_{4})&I_{4} + &r_{2} &I_{6} = -E_{1} + E_{2}
+  \end{align*}
+  \begin{align*}
+    &:                  &             &              &        (R_{4} + r_{3}) &I_{4}  + R_{5}&I_{5} & &= E_{3} \\
+    &:                  &       R_{2} &I_{2}  - R_{3}&I_{3}                           + R_{5}&I_{5} + r_{2} &I_{6} &= E_{2} \\
+    &: -(r_{1} + R_{1}) &I_{1}        &       - R_{3}&I_{3} - (r_{3} + R_{4})&I_{4} + &r_{2} &I_{6} = -E_{1} + E_{2}
+  \end{align*}
+
+  % Trečia su klaidomis.
+  
 \end{exmp}
