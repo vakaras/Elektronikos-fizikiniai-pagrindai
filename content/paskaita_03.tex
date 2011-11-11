@@ -341,24 +341,41 @@ orientuojasi ir medžiagos paviršiuje atsiranda krūviai.
 Kristaliniai dialektrikai (dar vadinami signeto arba feroelektrikais) – 
 prie tam tikros temperatūros pasižymi savaimine poliarizacija.
 
-\subsection{Kondensatorius}
+\subsection{Elektrinė talpa ir krūvis}
 
-Elektrinė talpa:
-\begin{align*}
-  C &= \frac{q}{\varphi} \\
-  Q &= CU \\
-  E &= \frac{\varphi_{1} - \varphi_{2}}{d} \\
-  E &= \frac{\sigma}{\varepsilon_{0}\varepsilon} = 
-  \frac{q}{\varepsilon_{0}\varepsilon S} \\
-  \sigma \equiv D &= \varepsilon_{0} \varepsilon E \\
-  c &= \frac{\varepsilon_{0} \varepsilon S}{d}.
-\end{align*}
-Čia:
+Elektrine talpa vadinamas dydis:
+\begin{equation*}
+  C = \frac{q}{U}
+\end{equation*}
+Jis matuojamas faradais:
+\begin{equation*}
+  1F = \frac{1C}{1V}
+\end{equation*}
+
+Išsiveskime plokščiojo kondensatoriaus talpos formulę:
+\begin{align}
+  C &= \frac{q}{U} \\
+  \intertext{Gaukime elektrinio lauko stiprio ir įtampos sąryšį:}
+  E
+  &= \frac{F}{q} \\
+  &= \frac{A}{qd} \\
+  &= \frac{U}{d} \label{eq:estipris_itampa} \\
+  \intertext{FIXME Iš kažkur žinome, kad plokštumos elektrinio lauko
+  stipris yra:}
+  E
+  &= \frac{\sigma}{\varepsilon_{0} \varepsilon} \\
+  &= \frac{q}{\varepsilon_{0} \varepsilon S} \\
+  &= \frac{CU}{\varepsilon_{0} \varepsilon S} 
+    \label{eq:estipris_itampa2} \\
+  \intertext{Iš \ref{eq:estipris_itampa} ir \ref{eq:estipris_itampa2} 
+  gauname, kad:}
+  C &= \frac{\varepsilon_{0}\varepsilon S}{d} \\
+\end{align}
+čia:
 \begin{description}
-  \item[$Q$] – krūvis;
   \item[$C$] – talpa;
-  \item[$U$] – potencialų skirtumas;
-  \item[$d$] – atstumas tarp potencialų;
+  \item[$d$] – atstumas tarp plokštelių;
+  \item[$S$] – plokštelių plotas.
 \end{description}
 
 \subsection{Laidininkai elektriniame lauke}
