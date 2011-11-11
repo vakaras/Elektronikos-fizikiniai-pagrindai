@@ -1,0 +1,246 @@
+\begin{align*}
+  j &=& \frac{d \sigma}{dt} \\
+\end{align*}
+čia:
+\begin{description}
+  \item[$j$] – srovės tankis;
+  \item[$\sigma$] – paviršinio krūvio tankis;
+\end{description}
+
+\begin{align*}
+  \sigma &\equiv D \\
+  D
+  &=& \varepsilon \varepsilon_{0} E \\
+  &=& \frac{Q}{4 \pi r^2} \\
+\end{align*}
+
+Slinkties srovė:
+\begin{align*}
+  j_{sl}
+  &=& \frac{\delta D}{\delta t} \\
+  &=& \frac{d\sigma}{dt} \\
+  &=& \varepsilon \varepsilon_{0} \frac{\delta E}{\delta t} \\
+\end{align*}
+
+Talpinė kondensatoriaus varža:
+\begin{align*}
+  X_{c} &=& \frac{1}{w C} \\
+\end{align*}
+
+\section{Varžų analizė (?)}
+
+Kai į grandinę įjungta paprasta varža:
+\begin{align*}
+  E &=& E_{0} \sin wt \\
+  I &=& \frac{E}{R} \\
+  &=& \underbrace{\frac{E_{0}}{R}}_{I_{0}} \sin wt \\
+\end{align*}
+\begin{verbatim}
+     ----
+-----|  |------
+|    ----     |
+|             |
+|             |
+----- ~ -------
+\end{verbatim}
+
+Kai į grandinę įjungtas kondensatorius:
+\begin{align*}
+  E &=& E_{0} \sin wt \\
+  E &=& \frac{Q}{C} \\
+  \frac{dE}{dt} &=& \frac{1}{C} \frac{dQ}{dt} \\
+  \intertext{Srovės apibrėžimas bendru atveju:}
+  I &=& \frac{dQ}{dt} \\
+  \intertext{Viską susistatę gauname:}
+  \underbrace{w E_{0} C}_{\t{aplitudė} I_{0}}
+    \cos \underbrace{w t}_{\t{fazė}} &=& I \\
+  I &=& I_{0} \cos w t \\
+  \cos wt &=& \sin \left( wt + \frac{\pi}{2} \right) \\
+  I_{0} &=& w C E_{0} \\
+  I &=&  I_{0} \sin \left( wt + \frac{\pi}{2} \right) \\
+  E_{0} &=& \underbrace{\frac{1}{wC}}_{X_{C}} I_{0} \\
+  \intertext{Primenama talpinė varža:}
+  X_{C} &=& \frac{1}{wC} \\
+\end{align*}
+\begin{verbatim}
+------||-------
+|             |
+|             |
+----- ~ -------
+\end{verbatim}
+
+Kai į grandinę įjungta ritė:
+\begin{align*}
+  E &=& -L \frac{dI}{dt} \\
+  E_{prd} &=& E \\
+  L \frac{dI}{dt} &=& E_{0} \sin wt \\
+  dI &=& \frac{E_{0}}{L} \sin wt \cdot dt \\
+  I &=& \frac{E_{0}}{L} \int \sin wt dt \\
+  \cos wt &=& -\sin \left( wt - \frac{\pi}{2} \right) \\
+  I &=& - \underbrace{\frac{E}{w L}}_{I_{0}} \cos wt \\
+  I &=& I_{0} \sin \left(wt - \frac{\pi}{2}\right) \\
+  E_{0} &=& \underbrace{wL}_{X_{L}} I_{0} \\
+\end{align*}
+\begin{verbatim}
+----oooooo-----
+|             |
+|             |
+----- ~ -------
+\end{verbatim}
+
+Kai į grandinę įjungta paprasta varža, kondensatorius ir ritė:
+\begin{align*}
+  e
+  &=& e_{R} + e_{C} + e_{L} \\
+  &=& I_{0} R \sin wt + I_{0} X_{C} \sin \left( wt - \frac{\pi}{2} \right)
+    + I_{0} X_{L} \sin \left(wt + \frac{\pi}{2}\right) \\
+  &=& I_{0}R \sin wt + I_{0} X_{L} \cos wt - I_{0} X_{C} \cos wt \\
+  \frac{e}{I_{0}} &=& R \sin wt + (X_{L} - X_{C})\cos wt \\
+  \frac{e}{I_{0}Z}
+  &=& \frac{R}{Z} \sin wt + \frac{X_{L} + X_{C}}{Z} \cos wt \\
+  e &=& I_{0} Z
+    \left( \cos \varphi \sin wt + \sin \varphi \cos wt \right) \\
+\end{align*}
+\begin{verbatim}
+     ---┓
+-----|  |---||---ooooo---
+|    └──┘               |
+|     R      C    L     |
+|                       |
+----------- ~ -----------
+\end{verbatim}
+
+Žr. 2.2.1 „Sinusinių dydžių vaizdavimas vektoriais“ skyrelį
+Masioko vadovėlyje.
+
+\begin{verbatim}
+   /|
+Z / |
+ /  | (X_{L} - X_{C})
+/___|
+  R
+\end{verbatim}
+
+\begin{align*}
+  \underbrace{Z}_{\frac{E_{0}}{I_{0}}}
+    &=& \sqrt{R^{2} + \left( X_{L} - X_{C} \right)^{2}} \\
+  \varphi &=& \arctan \frac{X_{L} - X_{C}}{R} \\
+  \cos \varphi &=& \frac{R}{Z} \\
+\end{align*}
+
+$Z$ – atstojamoji grandinės varža, impedancas.
+
+\begin{align*}
+  Z &=& \sqrt{R^{2} + \left( wL - \frac{1}{wC} \right)^{2}}
+\end{align*}
+
+% INCLUDE: Brėžinį iš Audriaus sąsiuvinio. ID=#0006
+\begin{align*}
+  w_{0} L - \frac{1}{w_{0}C} &=& 0 \\
+  w_{0} &=& \frac{1}{\sqrt{LC}} \\
+  w_{0} &=& 2 \pi \frac{1}{T} \\
+  \intertext{Tomsono formulė:}
+  T = 2 \pi \sqrt{LC} \\
+\end{align*}
+čia:
+\begin{description}
+  \item[$w_{0}$] – rezonancinis dažnis.
+\end{description}
+
+\section{Kintamos srovės galia}
+
+Momentinė galia:
+\begin{align*}
+  p &=& e \cdot i \\
+  i &=& I_{0} \sin wt \\
+  e &=& E_{0} \sin \left( wt + \varphi \right) \\
+  p &=& E_{0} I_{0} \sin \left( wt + \varphi \right) \sin wt \\
+\end{align*}
+
+Efektinė:
+\begin{align*}
+  E_{0}
+  &=& \underbrace{E_{ef}}_{\t{Dažniausiai žymime tiesiog} E} \sqrt{2} \\
+  I_{0} &=& I_{ef} \sqrt{2} \\
+  \sin \alpha \cdot \sin \beta
+  &=& \frac{1}{2} \cos(\alpha - \beta) - \frac{1}{2} \cos(\alpha + \beta) \\
+  \sin (wt + \varphi) \cdot \sin wt
+  &=& \frac{1}{2} \cos \varphi - \frac{1}{2} \cos (2 wt + \varphi) \\
+  E_{0}I_{0} &=&  2 UI \\
+  p &=& UI \cos \varphi - UI\cos (2wt + \varphi) \\
+  \intertext{vidutinė galia per periodą:}
+  p
+  &=& \frac{1}{T} \int _{0} ^{T} p dt \\
+  &=& UI \cos \varphi \\
+\end{align*}
+
+\section{Pratybos}
+
+% INCLUDE: Brėžinį iš Ramintos sąsiuvinio.
+
+\emph{Sąlyga} Elektronas be pradinio greičio pralekia 10000 V potencialų
+skirtumą ir įlekia į plokščią kondensatorių, lygiagrečiai jo plokštelėms.
+Kondensatorius įelektrintas iki 100 V. Atstumas tarp kondensatoriaus
+plokštelių yra 2 cm, o ilgis 20 cm. Rasti atstumą BC arba $h_{1} + h_{2}$
+ekrane, nutolusiame nuo kondensatoriaus 1 metru.
+
+\begin{align*}
+  U_{0} &=& 10^{4} V \\ 
+  U_{1} &=& 100 V \\
+  d &=& 0,02 m \\
+  l_{1} &=& 0,2 m \\
+  l_{2} &=& 1m \\
+  \intertext{Elektrono kinetinė energija yra lygi elektrinio lauko darbui:}
+  \frac{m v_{0}^{2}}{2} &=& e U_{0} \\
+  \intertext{Iš čia gauname, kad elektrono pradinis greitis būtų:}
+  v_{0}
+  &=& \sqrt{\frac{2 e U_{0}}{m}} \\
+  &=& 0,593 \cdot 10^{8} \frac{m}{s} \\
+  \intertext{Kondensatoriaus viduje elektroną veikia jėga:}
+  F
+  &=& e \cdot E \\
+  &=& e \frac{U_{1}}{d} \\
+  \intertext{Elektronas tarp plokštelių skries:}
+  l_{1} &=& v_{0} \cdot t' \\
+  t' &=& \frac{l_{1}}{v_{0}} \\
+  \intertext{Elektrono greičio projekcija ekrano atžvilgiu:}
+  v_{y}
+  &=& a t' \\
+  &=& \frac{F}{m} \cdot \frac{l_{1}}{v_{0}} \\
+  &=& \frac{eU_{1}}{dm} \frac{l_{1}}{v_{0}} \\
+  \intertext{Dabar galime apskaičiuoti atstumą $h_{1}$:}
+  h_{1}
+  &=& \frac{a t'^{2}}{2} \\
+  &=& \frac{eU_{1}}{dm} \left( \frac{l_{1}}{v_{0}} \right)^{2} \\
+  \intertext{Pastebime proporciją:}
+  \frac{l_{2}}{h_{2}} &=& \frac{v_{0}}{v_{y}} \\
+  \intertext{Dabar galime išsireikšti $h_{2}$:}
+  h_{2}
+  &=& \frac{v_{y} l_{2}^{2}}{v_{0}} \\
+  &=& \frac{eU_{1} l_{2}^{2}l_{1}}{dmv_{0}^{2}} \\
+  \intertext{Viską sudėją:}
+  h_{1} + h_{2}
+  &=& \frac{eU_{1}}{dm} \left( \frac{l_{1}}{v_{0}} \right)^{2} +
+    \frac{eU_{1} l_{2}^{2}l_{1}}{dmv_{0}^{2}} \\
+  &=& \frac{eU_{1}l_{1}}{dmv_{0}}
+    \left( l_{1} + \frac{l_2^2}{v_{0}} \right) \\
+  &=& 0,06 m
+\end{align*}
+
+%Python skaičiavimas:
+%from math import sqrt
+
+%u0 = 10 **4
+%u1 = 100
+%d = 0.02
+%l1 = 0.2
+%l2 = 1
+%e = 1.6021892 * 10 ** (-19)
+%m = 9.1 * 10 ** (-31)
+%v0 = 0.593 * 10 ** 8
+%v0 = sqrt((2 * e * u0)/(m))
+
+%h1 = ((e * u1)/(d * m)) * ((l1)/(v0))**2
+%h2 = (e * u1 * l2 ** 2 * l1)/(d * m * v0 ** 2)
+
+%print h1+ h2
