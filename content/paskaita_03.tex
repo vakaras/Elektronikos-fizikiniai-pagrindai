@@ -94,6 +94,19 @@ vienodas ir yra lygus:
 
 FIXME Išsiaiškinti kas per velnias yra šitai.
 Žr.: \url{http://en.wikipedia.org/wiki/Electric_displacement_field}
+Žr.: \url{http://www.scritube.com/limba/lituaniana/Fizikos-formuli-rinkinys11515191913.php}
+
+Gauso teorema:
+\begin{equation*}
+  \oint _{S} \vec{E} \cdot d \vec{S}
+  = \frac{\sum_{i}q_{i}}{\varepsilon_{0}}
+\end{equation*}
+čia:
+\begin{description}
+  \item[$\oint_{S}\vec{E} \cdot d\vec{S}$] – elektrostatinio lauko stiprio
+    vektoriaus srautas per bet kokį uždarą paviršių,
+  \item[$\sum _{i} q_{i}$] – to paviršiaus apribotas krūvis.
+\end{description}
 
 \begin{description}
   \item[$\vec{D}$] – elektrostatinė indukcija.
@@ -218,55 +231,115 @@ Vienas elektron-voltas:
   &= 1,6 \cdot 10^{-19} J
 \end{align*}
 
-\section{Dielektrikų poliarizacija}
+\subsection{Dielektrikai}
 
-Dielektrikų rūšys:
+\begin{defn}[Dielektrikai]
+  Medžiagos, kurios prastai praleidžia elektros srovę.
+\end{defn}
+
+Pagal molekulių sandarą dielektrikai skirstomi į:
 \begin{description}
-  \item[nepoliniai dielektrikai] – tie, kurių normaliomis sąlygomis
-    elektronų svorio centras sutampa su elektrono svorio centru.
-  \item[dipoliniai dielektrikai] – tie, kurių elektronų svorio centras
-    ir branduolio svorio centras nesutampa.
+  \item[poliniai dielektrikai] – tie, kurių teigiamų krūvių ir neigiamų
+    krūvių pasiskirstymo centrai nesutampa;
+  \item[nepoliniai dielektrikai] – tie, kurių normaliomis teigiamų
+    ir neigiamų krūvių pasiskirstymo centrai sutampa (įnešus nepolinius
+    dielektrikus į elektrinį lauką, jų teigiamų ir neigiamų krūvų
+    centrai pasislenka į priešingas puses ir todėl juos toliau
+    galima nagrinėti lygiai taip pat, kaip ir polinius dielektrikus).
 \end{description}
 
-Dipolinis momentas:
-\begin{align*}
-  \vec{p_{e}} &= q \cdot \vec{l}
-\end{align*}
+Polines molekules galima apytiksliai nagrinėti, kaip elektrinius dipolius.
 
-Indukuotą dipolinį elektrinį momentą proporcingą elektrinio lauko stipriui.
+\begin{defn}[Elektrinis dipolis]
+  Du skirtingų ženklų, bet vienodo modulio, taškiniai krūviai,
+  esantys $l$ atstumu vienas nuo kito. Pagrindinė elektrinio dipolio
+  charakteristika yra jo dipolinis elektrinis momentas:
+  \begin{align*}
+    \vec{p_{i}} &= q \cdot \vec{l}
+  \end{align*}
+  čia:
+  \begin{description}
+    \item[$p_{i}$] – dipolinis elektrinis momentas;
+    \item[$q$] – teigiamo (arba neigiamo) poliaus krūvio didumas;
+    \item[$l$] – atstumas tarp krūvių.
+  \end{description}
+\end{defn}
 
-Joninė poliarizacija – 
-
-Poliarizacijos vektorius:
-\begin{align*}
-  \vec{P}
-  &= \frac{1}{\Delta V} \sum _{i=1} ^{h} \vec{P}_{ei} \\
-  &= n_{0} \cdot \alpha \cdot \varepsilon_{0} \cdot \vec{E} =
-    \Xi \varepsilon \vec{E_{0}}
-\end{align*}
-
-\begin{align*}
-  E &= E_{0} - E' \\
-  E' &= E_{0} - E = E_{0} - \frac{E_{0}}{\varepsilon} 
-  = E_{0} \left( 1 - \frac{1}{\varepsilon} \right) \\
-  E' &= (\varepsilon - 1)E \\
-  \varepsilon = 1 + \Xi
-\end{align*}
-Čia:
+Įnešus polinį dielektriką į elektrinį lauką, dėl Kulono jėgos atsiranda
+sukamasis momentas:
+\begin{equation*}
+  M = p_{i} \cdot E \sin \alpha
+\end{equation*}
+čia:
 \begin{description}
-  \item[$E_{0}$] – išorinis laukas;
-  \item[$E'$] – poliarizacijos laukas.
+  \item[$\vec{p_{i}}$] – molekulės dipolinis elektrinis momentas;
+  \item[$\vec{E}$] – elektrinio lauko stipris;
+  \item[$\alpha$] – kampas tarp vektorių $\vec{p_{i}}$ ir $\vec{E}$.
+\end{description}
+Dipoliai orientuojasi ir atsiranda dielektriko savasis elektrinis
+laukas, kurio kryptis yra priešinga išoriniam. Todėl dielektriko
+elektrostatinio lauko stiprumas yra $\varepsilon$ kartų mažesnis
+nei vakuumo:
+\begin{equation*}
+  E = \frac{E_{0}}{\varepsilon}
+\end{equation*}
+čia:
+\begin{description}
+  \item[$E$] – elektrinio lauko stiprumas dielektrike;
+  \item[$E_{0}$] – elektrinio lauko stiprumas vakuume;
+  \item[$\varepsilon$] – aplinkos dielektrinė skvarba.
+\end{description}
+Dielektriko poliarizacijos vektorius (poliarizuotumas):
+\begin{equation*}
+  \vec{P} = \frac{1}{V} \sum _{i=1} ^{N} \vec{p_{i}}
+\end{equation*}
+čia:
+\begin{description}
+  \item[$N$] – dipolių skaičius tūryje $V$;
+  \item[$\vec{p_{i}}$] – i-ojo dipolio elektrinis momentas.
 \end{description}
 
 \subsection{Poliarizacijos histerezė}
+
+\begin{defn}[Histerezė]
+  Objekto fizikinės būsenos nevienareikšmė priklausomybė nuo fizikinio
+  dydžio, apibūdinančio išorines sąlygas. (DLKŽ)
+\end{defn}
+
+\begin{defn}[Histerezė]
+  Pasekmės atsilikimas nuo ją sukėlusios priežasties; ankstesnių sąlygų
+  vėlesnis veikimas. (DLKŽ)
+\end{defn}
+
+\begin{defn}[Poliarizacijos histerezė]
+  FIXME
+
+  Vyksta feroelektrikuose, jų viduje poliarizuojantis turinčioms dipolinį
+  momentą sritelėms, vadinamoms domenais. Šis reiškinys pasižymį
+  dvejomis išskirtinėmis savybėmis:
+  \begin{itemize}
+    \item feroelektrikas nepraranda poliarizacijos, panaikinus išorinį
+      elektrinį lauką;
+    \item feroelektrikas gali būti poliarizuotas dviem kryptimis.
+  \end{itemize}
+  \ref{fig:histereze} paveikslėlyje pavaizduota kreivė $P = f(E)$ vadinama 
+  histerezės kilpa, o tokia poliarizuotumo priklausomybė – dielektrine
+  histereze.
+\end{defn}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[height=0.5\textwidth]{images/histereze.png}
+  \end{center}
+  \caption{Histerezės kilpa}
+  \label{fig:histereze}
+\end{figure}
 
 Pjezo efektas – spaudžiant medžiagą, turinčią dipolių, dipoliai
 orientuojasi ir medžiagos paviršiuje atsiranda krūviai.
 
 Kristaliniai dialektrikai (dar vadinami signeto arba feroelektrikais) – 
 prie tam tikros temperatūros pasižymi savaimine poliarizacija.
-
-Histerizės kilpa –
 
 \subsection{Kondensatorius}
 
