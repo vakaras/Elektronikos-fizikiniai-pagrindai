@@ -1,12 +1,103 @@
-\chapter{TODO}
-
 \begin{defn}[Solenoidas]
   TODO: ~ritė
 \end{defn}
 
 \section{Elektromagnetinės indukcijos reiškinys}
 
-% INCLUDE: Brėžinį iš Audriaus sąsiuvinio. ID=#0004
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[height=0.5\textwidth]{images/remelis.png}
+  \end{center}
+  \caption{Rėmelis magnetiniame lauke}
+  \label{fig:remelis}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[height=0.5\textwidth]{images/besisukantis_laidininkas.png}
+  \end{center}
+  \caption{Besisukantis laidininkas}
+  \label{fig:besisukantis_laidininkas}
+\end{figure}
+
+\begin{defn}[Indukcinė elektros srovė]
+  Elektros srovė, kuri atsiranda laidininke, dėl magnetinio srauto
+  kertančio to laidininko apribotą plotą, kitimo.
+\end{defn}
+
+Jeigu rėmelis sukasi magnetiniame lauke, tai tarp taškų $P_{1}$ ir
+$P_{2}$ atsiranda potencialų skirtumas. Jėga veikianti krūvio nešėją,
+kurio krūvis yra $q$, yra lygi:
+\begin{align*}
+  F_{1} =& q \cdot v \cdot B \cdot \sin \alpha \\
+\end{align*}
+čia:
+\begin{description}
+  \item[$v$] – laidininko dalies $l_{1}$ judėjimo greitis;
+  \item[$B$] – magnetinė indukcija;
+  \item[$\alpha$] – kampas tarp $\vec{B}$ ir $\vec{v}$.
+\end{description}
+Kadangi žinome, kad apskritimu judančio kūno greitis yra lygus to
+kūno kampinio greičio ir apskritimo spindulio sandaugai, tai gauname:
+\begin{align*}
+  v &= \omega \frac{l_{2}}{2} \\
+  F_{1} &= q \frac{\omega l_{2}}{2} B \sin \alpha \\
+\end{align*}
+Darbas, atliekamas perkeliant krūvį $q$, atkarpoje $l_{1}$ yra lygus:
+\begin{align*}
+  A_{1}
+  &= F_{1} \cdot l_{1} \\
+  &= q \frac{\omega l_{2}}{2} B \sin \alpha l_{1}, \\
+  \intertext{o atkarpoje $l_{2}$ – $A_{2} = 0$, nes $\vec{F}$ ir $l_{2}$
+  yra tarpusavyje statmeni. Iš viso, darbas atliekamas perkeliant krūvį
+  iš taško $P_{1}$ į tašką $P_{2}$ yra lygus:}
+  A
+  &= A_{1} + A_{2} + A_{3} + A_{4} \\
+  &= A_{1} + 0 + A_{3} + 0 \\
+  &= 2 \cdot A_{1} \\
+  &= q l_{2} l_{1} B \omega \sin \alpha \\
+\end{align*}
+Gauname, kad elektrovara laiko momentu $t$ yra lygi:
+\begin{align*}
+  \varepsilon
+  &= \frac{A}{q} \\
+  &= l_{2} l_{1} B \omega \sin \alpha \\
+  &= S B \omega \sin \alpha \\
+  &= B S \omega \sin \omega t \\
+\end{align*}
+Kadangi rėmelį veriantis magnetinis srautas yra lygus:
+\begin{align*}
+  \Phi_{B}
+  &= \int B \cdot d S \\
+  &= B l_{1} l_{2} \cos \alpha \\
+  &= B S \cos \alpha \\
+\end{align*}
+tai gauname, kad:
+\begin{align*}
+  \frac{d \Phi_{B}}{d t}
+  &= BS \cos \alpha |_{t} \\
+  &= BS \cos \left( \omega t \right) |_{t} \\
+  &= - \underbrace{BS \omega \sin \omega t}_{\varepsilon} \\
+\end{align*}
+Taigi:
+\begin{align*}
+  \varepsilon = -\frac{d \Phi_{B}}{d t} \\
+\end{align*}
+
+\begin{defn}[Faradėjaus elektromagnetinės indukcijos dėsnis]
+  Jeigu $N$ vijų turintį, besisukantį kontūrą (žr.
+  \ref{fig:remelis}) veria magnetinis laukas, tai tarp taškų $P_{1}$
+  ir $P_{2}$ sukurta elektrovara yra lygi:
+  \begin{align*}
+    \varepsilon = - N \frac{d \Phi_{B}}{d t} \\
+  \end{align*}
+\end{defn}
+
+\begin{defn}[Lenco taisyklė]
+  Indukcijos elektrovaros kontūre sužadinta srovė visada teka tokia
+  kryptimi, kad jos magnetinio lauko indukcija priešinasi pirminio
+  magnetinio lauko kitimui.
+\end{defn}
 
 \begin{align*}
   F_{1} &=& q \cdot v \cdot B \cdot \sin \alpha \\
