@@ -108,6 +108,13 @@ Elektrono greitis:
 
 \subsection{Srovės magnetinis laukas}
 
+Kol laidininke srovė neteka, magnetinė rodyklė nusistovi pagal Žemės
+magnetinio lauko kryptį. Kai srovė teka – rodyklė stengiasi pasisukti
+statmenai laidininkui – ją veikia srovės magnetinis laukas. Tai nustatė
+Erstedas 1820 metais. Kadangi srovė laidininke yra tvarkingas elektronų
+judėjimas, tai reiškia, kad apie bet kokį judantį krūvį turi egzistuoti
+magnetinis laukas.
+
 \begin{defn}[Magnetinis laukas]
   Ypatingos formos materija, perduodanti judančių elektros krūvių
   sąveiką.
@@ -145,6 +152,8 @@ Elektrono greitis:
     \item[$\mu$] – santykinė aplinkos magnetinė skvarba;
     \item[$\vec{H}$] – magnetinio lauko stipris.
   \end{description}
+  Magnetinės indukcijos linijos apie laidininką, kuriuo teka srovė, yra
+  išsidėsčiusios pagal dešiniojo sraigto taisyklę.
 \end{defn}
 
 \begin{defn}[Lorenco jėga]
@@ -190,35 +199,102 @@ Elektrono greitis:
   \end{description}
 \end{defn}
 
+\begin{note}
+  Ampero jėgos išraišką galime nesunkiai gauti iš Lorenco jėgos
+  išraiškos:
+  \begin{align*}
+    F
+    &= q v B \sin \alpha \\
+    &= \underbrace{I t}_{q} v B \sin \alpha \\
+    &= I \underbrace{t v}_{l} B \sin \alpha \\
+    &= I l B \sin \alpha \\
+  \end{align*}
+\end{note}
+
 Elektromagnetiniame lauke judantį krūvį veikianti jėga:
 \begin{align*}
   F &= q \vec{E} + q \left[ \vec{v} \cdot \vec{B} \right]
 \end{align*}
 
-Suraskime tiesaus begalinio laidininko nuo jo atstumu $r_{0}$ esančiame
-taške kuriamą indukciją:
-\begin{align*}
-  \intertext{nykstamai trumpos laidininko atkarpos kuriama magnetinė
-  indukcija:}  
-  B
-  &= \mu_{0} \mu H \\
-  &= \mu_{0} \mu \frac{I}{l} \\
-  \intertext{$l$ yra apskritimo, kurio spindulys jungia tašką su 
-  nagrinėjama laidininko atkarpa, ilgis:}
-  l
-  &= 2 \pi r \\
-  &= 2 \pi \frac{r_{0}}{\cos \alpha} \\
-  \intertext{sujungę gauname:}
-  B
-  &= \mu_{0} \mu \frac{I \cos \alpha}{2 \pi r_{0}} \\
-  \intertext{kadangi mūsų laidininkas yra begalinio ilgio, tai
-  $\alpha$ kitimo sritis yra nuo $-\frac{\pi}{2}$ iki $\frac{\pi}{2}$:}
-  B
-  &= 2 \int _{0} ^{\frac{\pi}{2}} \mu_{0} \mu 
-    \frac{I \cos \alpha}{2 \pi r_{0}} d \alpha \\
-  &= 2 \mu_{0} \mu \frac{I}{2 \pi r_{0}}
-    \int _{0} ^{\frac{\pi}{2}} \cos \alpha d\alpha \\
-  &= \frac{\mu_{0} \mu}{\pi} \frac{I}{r_{0}}\\
-  \intertext{FIXME: Turėjo gautis:}
-  B &= \frac{\mu_{0} \mu}{2 \pi} \frac{I}{r_{0}}
-\end{align*}
+\begin{defn}[Bio Savaro Laplaso dėsnis]
+  Bet kurios srovės magnetinio lauko indukcija gali būti apskaičiuota,
+  kaip magnetinių laukų, sukuriamų atskirų elementarių srovės
+  elementų $d\vec{l}$, indukcijų vektorinė suma:
+  \begin{align}
+    d \vec{B} &=
+      \frac{\mu_{0}}{4 \pi}
+      \frac{I \left[ d\vec{l}, \vec{r} \right] }{r^{3}} \\
+    dB &=
+      \frac{\mu_{0}}{4\pi}\frac{I \cdot dl \cdot \sin \alpha}{r^{2}} 
+      \label{eq:bsl_sin} \\
+    \vec{B} &=
+      \frac{\mu_{0}I}{4\pi}
+      \int _{(l)} \frac{\left[ d\vec{l} \cdot \vec{r} \right]}{r^{3}} \\
+  \end{align}
+  čia:
+  TODO: Paaiškinti. Šis dėsnis išvedamas iš:
+  \begin{align*}
+    \intertext{atskiras magnetinės jėgos tarp dviejų judančių
+    krūvių atvejis:}
+    F_{m} &= \frac{\mu_{0}q_{1}q_{2}v^{2}}{4\pi r^{2}} \\
+    \intertext{bendras magnetinės jėgos tarp dviejų judančių krūvių
+    atvejis:}
+    \vec{F_{m}} &=
+      \frac{\mu_{0} q_{1} q_{2}
+        \left( \vec{v}_{2} \times (\vec{v_{1} \times \vec{r}}) \right)
+        }{4 \pi r^{3}} \\
+    \intertext{$\vec{v_{1}}$ greičiu judantis $q_{1}$ krūvis atstumu
+      $\vec{r}$ kuria magnetinį lauką:}
+      \vec{B} &=
+        \frac{\mu_{0} q_{1} \left( \vec{v_{1}} \times \vec{r} \right)
+        }{4 \pi r^{3}}
+    \intertext{Atkarpėlės ilgį pažymėkime $dl$, o ja tekančios
+    srovės stiprį $I$. Čia $|d\vec{l}| = dl$, o $d\vec{l}$ kryptis
+    sutampa su srovės tekėjimo kryptimi. Krūvininkų skaičių srovės
+    elemente pažymėkime $d N$, o jų dreifo greitį $v$, srovės elemento
+    skerspjūvio plotą $S$, krūvininkų tankį $n$. Tada pasinaudodami
+    (TODO: nuoroda), apskaičiuojame, kad srovės elemento sukurtas
+    magnetinio srauto tankis:}
+    d \vec{B} &=
+      \frac{\mu_{0}q\left( \vec{v} \times \vec{r} \right)}{4 \pi r^3 }
+      \cdot d N \\
+    \intertext{Kadangi:}
+    v &= \frac{I}{qnS} \\
+    dN
+    &= ndV \\
+    &= n S dl \\
+    \intertext{Gauname:}
+    d \vec{B} &=
+      \frac{\mu_{0}I\left( d \vec{l} \times \vec{r} \right)}{4 \pi r^3}
+  \end{align*}
+\end{defn}
+
+\begin{exmp}
+  Apskaičiuokime magnetinę indukciją $B$, kurią sukuria tiesus, plonas,
+  be galo ilgas laidininkas atstumu $r_{0}$ nuo laido:
+  \begin{align*}
+    \intertext{nykstamai trumpos laidininko atkarpos kuriama magnetinė
+    indukcija:}  
+    B
+    &= \mu_{0} \mu H \\
+    &= \mu_{0} \mu \frac{I}{l} \\
+    \intertext{$l$ yra apskritimo, kurio spindulys jungia tašką su 
+    nagrinėjama laidininko atkarpa, ilgis:}
+    l
+    &= 2 \pi r \\
+    &= 2 \pi \frac{r_{0}}{\cos \alpha} \\
+    \intertext{sujungę gauname:}
+    B
+    &= \mu_{0} \mu \frac{I \cos \alpha}{2 \pi r_{0}} \\
+    \intertext{kadangi mūsų laidininkas yra begalinio ilgio, tai
+    $\alpha$ kitimo sritis yra nuo $-\frac{\pi}{2}$ iki $\frac{\pi}{2}$:}
+    B
+    &= 2 \int _{0} ^{\frac{\pi}{2}} \mu_{0} \mu 
+      \frac{I \cos \alpha}{2 \pi r_{0}} d \alpha \\
+    &= 2 \mu_{0} \mu \frac{I}{2 \pi r_{0}}
+      \int _{0} ^{\frac{\pi}{2}} \cos \alpha d\alpha \\
+    &= \frac{\mu_{0} \mu}{\pi} \frac{I}{r_{0}}\\
+    \intertext{FIXME: Turėjo gautis:}
+    B &= \frac{\mu_{0} \mu}{2 \pi} \frac{I}{r_{0}}
+  \end{align*}
+\end{exmp}
