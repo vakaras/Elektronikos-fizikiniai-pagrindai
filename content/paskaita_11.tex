@@ -1,0 +1,105 @@
+\section{Harmoninio svyravimo apibrėžimas}
+
+TODO: Išsiaiškinti, ką iš tiesų reikėtų žinoti.
+
+Harmoninio svyravimo lygtis:
+\begin{equation}
+  x = A \sin \left( \omega_{0}t + \alpha \right)
+  \label{eq:harmonine_x}
+\end{equation}
+čia:
+\begin{description}
+  \item[$x$] – atsilenkimas (poslinkis) nuo pusiausvyros padėties
+    (pavyzdžiui, materialaus taško);
+  \item[$\omega_{0}$] – nuosavų svyravimų dažnis;
+  \item[$\alpha$] – pradinė fazė;
+  \item[$t$] – laiko momentas.
+\end{description}
+
+Raskime greitį:
+\begin{align*}
+  v_{x}
+    &= x' \\
+    &= A \omega_{0} \cos \left( \omega_{0}t + \alpha \right) \\
+    &= A \omega_{0}
+        \sin \left( \omega_{0}t + \alpha + \frac{\pi}{2} \right) \\
+\end{align*}
+Gavome, kad greitis aplenkia poslinkį per $\frac{\pi}{2}$. Raskime
+pagreitį:
+\begin{align}
+  a_{x}
+    &= x'' \\
+    &= -A \omega_{0}^{2} \sin \left( \omega_{0}t + \alpha \right) \\
+    &= A \omega_{0}^{2} \sin \left( \omega_{0}t + \alpha + \pi \right) 
+  \label{eq:harmonine_a} \\
+\end{align}
+Gavome, kad pagreitis ir poslinkis yra priešingų fazių. Padalinę
+\ref{eq:harmonine_a} iš \ref{eq:harmonine_x} gauname harmoninio svyravimo
+diferencialinę lygtį:
+\begin{equation*}
+  x'' + \omega_{0}^{2}x = 0
+\end{equation*}
+
+\subsection{LC kontūras ir elektromagnetiniai svyravimai}
+
+Kiekviena elektrinė grandinė (be šaltinio) gali turėti varžą, induktyvumą
+ir talpą. Nagrinėsime idealų atvejį, kai ritė neturi aktyvinės varžos.
+
+Tegul kondensatorius įelektrintas $+Q_{0}, -Q_{0}$. Laiko momentu $t=0$
+grandinę sujungiame. Išsielektrinant kondensatoriui srovė ritėje stiprėja.
+Kiekvienu laiko momentu potencialų skirtumas kondensatoriuje
+($U = \frac{Q}{C}$) yra lygus potencialų skirtumui ritėje, tai yra
+saviindukcijos evj. ($-L\frac{dI}{dt}$), nes nėra įtampos kritimo
+aktyvinėje varžoje.
+
+Kai kondensatorius išsielektrina ($Q = 0$), srovė ritėje pasiekia
+didžiausią vertę, indukcija ritėje yra taip pat maksimali. Energija
+sukaupta kondensatoriuje virto ritės magnetinio lauko energija:
+\begin{align*}
+  W_{e} &= W_{m} \\
+  \frac{CU_{C}^{2}}{2} &= \frac{LI_{m}^{2}}{2} \\
+\end{align*}
+Toliau srovė ritėje mažėja ir įelektrina kondensatorių. Kai $I = 0$, 
+tai $Q = Q_{0}$, tik dabar kondensatorius įelektrintas priešingu
+poliariškumu, negu buvo pradžioje ($t = 0$). Procesas vyks toliau.
+Šis procesas vadinamas elektromagnetiniu svyravimu. Aprašykime
+tai matematiškai:
+\begin{align}
+  \intertext{potencialui didėjant, srovė mažėja:}
+  \frac{Q}{C}
+    &= - L\frac{dI}{dt} \label{eq:emsvyravimas_01} \\
+  \intertext{žinome, kad:}
+  I
+    &= \frac{dQ}{dt} \label{eq:emsvyravimas_02} \\
+  \intertext{įsistatome \ref{eq:emsvyravimas_02} į
+  \ref{eq:emsvyravimas_01}:}
+  \frac{Q}{C}
+    &= - L \frac{d^{2}Q}{dt^{2}} \\
+  \frac{d^{2}Q}{dt^{2}} + \frac{1}{LC}Q &= 0 \\
+\end{align}
+Gavome paprasto harmoninio svyravimo diferencialinę lygtį, kurios
+sprendinys yra:
+\begin{equation*}
+  Q = Q_{0} \cos \left( \omega t + \varphi \right) \\
+\end{equation*}
+čia:
+\begin{description}
+  \item[$\omega$] $= \sqrt{\frac{1}{LC}}$.
+\end{description}
+
+TODO: Parodyti, kaip gaunamas periodas.
+
+Raskime srovės išraišką ritėje:
+\begin{align*}
+  I
+    &= \frac{dQ}{dt} \\
+    &= - \omega Q_{0} \sin \left( \omega t + \varphi \right) \\
+\end{align*}
+taip pat gavome, kad aplitudinis srovės stipris yra:
+\begin{align*}
+  I_{m}
+    &= \omega Q_{0} \\
+    &= \frac{Q_{0}}{\sqrt{LC}} \\
+\end{align*}
+
+TODO: Parodyti elektrinio ir magnetinio laukų kitimus.
