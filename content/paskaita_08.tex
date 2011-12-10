@@ -186,22 +186,231 @@ Atliktas darbas srovei stiprėjant nuo 0 iki $I$:
     &= \frac{LI^{2}}{2} \\
 \end{align*}
 
-\chapter{Kintamoji srovė}
+\section{Kintamoji srovė}
 
-\section{Omo dėsnis kintamajai srovei}
+\subsection{Omo dėsnis kintamajai srovei}
 
-Induktyvioji (reaktyvioji) varža:
+\ref{fig:grandine:RLC} paveikslėlyje pateiktoje grandinėje nuolatinė
+elektros srovė teka tik tol, kol pasikrauna kondensatorius $C$. Tuo
+tarpu, kintamoji srovė šioje grandinėje teka.
+
+\begin{figure}[H]
+  \begin{center}
+    \begin{circuitikz}[scale=1.2]\draw
+    (0,2) -- (0, 4)
+          to[generic, l=$R$] (2, 4)
+          to[L, l=$L$] (4, 4)
+          to[C, l=$C$] (6, 4)
+          to[ammeter] (6, 2)
+          -- (4, 2)
+          to[vsourcesin, l=$U$] (2, 2)
+          -- (0, 2)
+    (2,2) -- (2, 0)
+          to[voltmeter] (4, 0)
+          -- (4, 2)
+    ;
+    \end{circuitikz}
+  \end{center}
+  \caption{Grandinė.}
+  \label{fig:grandine:RLC}
+\end{figure}
+
+Dabar grandinėje palikime tik $R$ ir $L$ (\ref{fig:grandine:RL}
+paveikslėlis). Iš pradžių prijunkime nuolatinę srovę, kurios įtampa yra
+$E$, ir išmatuokime srovės stiprį $I_{1}$. Tada prijunkime kintamąją
+srovę, kurios įtampa $E_{\t{efektinė}} (E_{\t{efektinė}} = E)$, ir
+išmatuokime $I_{2}$. Gausime, kad $I_{2} < I_{1}$. Taigi ritė sudaro
+varžą, kuri vadinama induktyviąja ir žymima $X_{L}$:
+\begin{equation}
+  X_{L} = \omega L
+  \label{eq:induktyvioji_varza}
+\end{equation}
+čia:
+\begin{description}
+  \item[$\omega$] – kampinis dažnis, $\omega = \frac{2\pi}{T}$,
+    kur $T$ – periodas.
+\end{description}
+
+\begin{figure}[H]
+  \begin{center}
+    \begin{circuitikz}[scale=1.2]\draw
+    (0,2) -- (0, 4)
+          to[generic, l=$R$] (3, 4)
+          to[L, l=$L$] (6, 4)
+          to[ammeter] (6, 2)
+          -- (4, 2)
+          to[vsourcesin, l=$U$] (2, 2)
+          -- (0, 2)
+    (2,2) -- (2, 0)
+          to[voltmeter] (4, 0)
+          -- (4, 2)
+    ;
+    \end{circuitikz}
+  \end{center}
+  \caption{Grandinė.}
+  \label{fig:grandine:RL}
+\end{figure}
+
+Dabar palikime grandinėje tik $R$ ir $C$ (\ref{fig:grandine:RC}
+paveikslėlis). Nuolatinė srovė šioje grandinėje neteka, o kintamai
+srovei tarp kondensatoriaus plokščių susidaro kintamas elektrinis
+laukas sudarantis kondensatoriaus dielektrike \emph{slinkties srovę},
+kuri yra laidumo srovės tęsinys. Slinkties srovės tankis yra
+\begin{equation*}
+  j_{sl} = \frac{d \sigma}{dt}
+\end{equation*}
+čia:
+\begin{description}
+  \item[$\sigma$] – elektrodo paviršinio krūvio tankis.
+\end{description}
+\begin{figure}[H]
+  \begin{center}
+    \begin{circuitikz}[scale=1.2]\draw
+    (0,2) -- (0, 4)
+          to[generic, l=$R$] (3, 4)
+          to[C, l=$C$] (6, 4)
+          to[ammeter] (6, 2)
+          -- (4, 2)
+          to[vsourcesin, l=$U$] (2, 2)
+          -- (0, 2)
+    (2,2) -- (2, 0)
+          to[voltmeter] (4, 0)
+          -- (4, 2)
+    ;
+    \end{circuitikz}
+  \end{center}
+  \caption{Grandinė.}
+  \label{fig:grandine:RC}
+\end{figure}
+Varža kurią sudaro kondensatorius kintamai srovei vadinama talpine:
+\begin{equation*}
+  X_{C} = \frac{1}{\omega C},
+\end{equation*}
+čia:
+\begin{description}
+  \item[$\omega$] – kampinis dažnis;
+  \item[$C$] – kondensatoriaus talpa.
+\end{description}
+
+Dabar vėl sujunkime \ref{fig:grandine:RLC} paveikslėlyje pateiktą grandinę
+ir raskime minėtus dėsningumus matematiškai. Kai į grandinę įjungta tik
+$R$, tai fazių skirtumas tarp srovės ir įtampos yra lygus 0. Tai yra:
 \begin{align*}
-  X_{L} &=& w L
+  \intertext{jei}
+  E
+    &= E_{0} \sin \omega t \\
+  \intertext{tai}
+  I
+    &= \frac{E}{R} \\
+    &= \frac{E_{0}}{R} \sin \omega t \\
+  \intertext{tuo tarpu kondensatoriuje, kadangi}
+  q
+    &= CE \\
+    &= C E_{0} \sin \omega t \\
+  \intertext{ir srovės stipris yra krūvio išvestinė}
+  I_{C}
+    &= C E_{0} \omega \cos \omega t \\
+    &= C E_{0} \omega \sin \left( \omega t + \frac{\pi}{2} \right) \\
+  \intertext{gavome, kad srovės stipris kondensatoriuje aplenkia įtampa
+  $\frac{\pi}{2}$. Amplitudžių $E_{0}$ ir $I_{0}$ santykis yra lygus
+  varžai:}
+  X_{C}
+    &= \frac{E_{0}}{I_{0}} \\
+    &= \frac{E_{0}}{C \omega E_{0}} \\
+    &= \frac{1}{\omega C} \\
+\end{align*}
+Dabar tarkime, kad per ritę tekantis srovės stipris yra:
+\begin{align*}
+  I
+    &= I_{0} \sin \omega t \\
+  \intertext{žinome, kad kintamoji įtampa $U$ ir saviindukcinė
+  elektrovaros jėga $E_{I}$ yra susijusios taip:}
+  U
+    &= E_{I} \\
+  \intertext{bet}
+  E_{I}
+    &= - \frac{d \Phi}{d t} \\
+    &= - L \frac{d I}{d t} \\
+    &= - L I_{0} \omega \cos \omega t \\
+    &= - L I_{0} \omega \sin \left( \omega t + \frac{\pi}{2} \right) \\
+  \intertext{taigi}
+  U
+    &= L I_{0} \omega \sin \left( \omega t + \frac{\pi}{2} \right) \\
+  \intertext{gavome, kad ritėje srovės stipris atsilieka nuo įtampos
+  per $\frac{\pi}{2}$.}
+\end{align*}
+
+Pilnos įtampos momentinės vertės:
+\begin{align*}
+  E
+    &= E_{R} + E_{C} + E_{L} \\
+    &=  I_{0} R \sin \omega t +
+        I_{0} X_{C} \sin \left( \omega t - \frac{\pi}{2} \right) +
+        I_{0} X_{L} \sin \left( \omega t + \frac{\pi}{2} \right) \\
+    &=  I_{0}R \sin wt + I_{0} X_{L} \cos wt - I_{0} X_{C} \cos wt \\
+  \frac{E}{I_{0}}
+    &= R \sin wt + (X_{L} - X_{C})\cos wt \\
+  \intertext{daliname abi lygybės puses iš impedanco (atstojamosios
+  grandinės varžos, žr. brėžinį):}
+  \frac{E}{I_{0}Z}
+    &= \frac{R}{Z} \sin wt + \frac{X_{L} + X_{C}}{Z} \cos wt \\
+  \intertext{iš brėžinio matome, kad}
+  \frac{R}{Z}
+    &= \cos \varphi \\
+  \frac{X_{L} - X_{C}}{Z}
+    &= \sin \varphi \\
+  \intertext{pakeitę, gauname:}
+  \frac{E}{I_{0}Z}
+    &= \cos \varphi \sin \omega t + \sin \varphi \cos \omega t \\
+  E
+    &= I_{0} Z ( \cos \varphi \sin wt + \sin \varphi \cos wt ) \\
+  \intertext{čia:}
+  Z
+    &= \sqrt{R^{2} + \left( X_{L} - X_{C} \right)^{2}} \\
+\end{align*}
+
+\begin{verbatim}
+   /|
+Z / |
+ /  | (X_{L} - X_{C})
+/___|
+  R
+\end{verbatim}
+
+$Z$ įgyja minimumą, kai
+\begin{align*}
+  X_{L} - X_{C}
+    &= 0 \\
+  \omega_{0} L - \frac{1}{\omega_{0}C}
+    &= 0 \\
+  \omega_{0}
+    &= \frac{1}{\sqrt{LC}} \\
+    &= 2 \pi \frac{1}{T} \\
 \end{align*}
 čia:
 \begin{description}
-  \item[$w$] – kampinis dažnis.
+  \item[$\omega_{0}$] – rezonansinis kampinis dažnis;
+  \item[$T$] – periodas.
 \end{description}
 
-\begin{defn}[Slinkties srovė]
-  TODO
-\end{defn}
+Iš čia gauname Tomsono formulę:
+\begin{equation*}
+  T = 2 \pi \sqrt{LC}
+\end{equation*}
+
+\subsection{Kintamos srovės galia}
+
+Momentinė galia:
+\begin{align*}
+  p &= e \cdot i \\
+  \intertext{sinusinei srovei:}
+  i &= I_{0} \sin \omega t \\
+  e &= E_{0} \sin \left( \omega t + \varphi \right) \\
+  \intertext{taigi}
+  p &= E_{0} I_{0} \sin \left( \omega t + \varphi \right) \sin \omega t \\
+\end{align*}
+
+TODO: dėstytojo konspektų 2 psl.
 
 \section{Sinusinių dydžių vaizdavimas vektoriais}
 
