@@ -12,112 +12,178 @@
   \end{description}
 \end{defn}
 
-\section{Saviindukcija}
+\subsection{Saviindukcija}
 
-\begin{align*}
-  \Phi &=& L \cdot I
-\end{align*}
+\begin{align}
+  \Phi &= L \cdot I \label{eq:magnetinis_srautas_nuo_stiprio} \\
+\end{align}
 čia:
 \begin{description}
-  \item[$L$] – ? kuris priklauso nuo aplinkos savybių.
-    $L = 1 \frac{Wb}{A} = 1H$
+  \item[$\Phi$] – rite tekančios srovės kuriamas magnetinis srautas;
+  \item[$I$] – ritėje tekančios srovės stipris;
+  \item[$L$] – ritės induktyvumas, kuris priklauso nuo aplinkos savybių
+    ($L = 1 \frac{Wb}{A} = 1H$).
 \end{description}
 
+Jei per laiko tarpą $dt$, srovės stipris pakito $dI$, tai
+iš \ref{eq:magnetinis_srautas_nuo_stiprio} gauname, kad:
 \begin{align*}
-  \frac{d\Phi}{dt} &=& L \frac{dI}{dt} \\
-  E_{i} &=& - \frac{d\Phi}{dt} \\
-  E_{i} &=& E_{s} \\
-  &=& - L \frac{dI}{dt} \\
-  I &=& \frac{E_{i}}{R} \\
-  &=& - \underbrace{\frac{1}{R}}_{\sigma} \frac{d\Phi}{dt}
-  I_{s} &=&  \frac{E_{s}}{R} \\
-  &=& - \frac{L}{R} \frac{dI}{dt}
-  I &=& \frac{E + E_{s}}{R} \\
-  &=& \frac{1}{R} \left( E - L \frac{dI}{dt} \right) \\
+  \frac{d\Phi}{dt}
+    &= L \frac{dI}{dt} \\
+  \intertext{pagal Faradėjaus dėsnį žinome, kad:}
+  E_{i}
+    &= - \frac{d\Phi}{dt} \\
+  \intertext{kadangi ši srovė $E_{i}$ yra indukuota srovės kitimo,
+  tai ją vadinsime saviindukcine srove ir žymėsime $E_{s}$:}
+  E_{s}
+    &= E_{i} \\
+    &= - L \frac{dI}{dt} \\
+  \intertext{iš Omo dėsnio žinome, kad srovės stipris yra:}
+  I_{i}
+    &= \frac{E_{i}}{R} \\
+    &= - \underbrace{\frac{1}{R}}_{\sigma} \frac{d\Phi}{dt} \\
+  \intertext{taigi indukuotas srovės stipris yra:}
+  I_{s}
+    &=  \frac{E_{s}}{R} \\
+    &= - \frac{L}{R} \frac{dI}{dt} \\
+  \intertext{bendras grandinėje tekantis srovės stipris yra:}
+  I
+    &= \frac{E + E_{s}}{R} \\
+    &= \frac{1}{R} \left( E - L \frac{dI}{dt} \right) \\
+  \intertext{taigi gavome, kad saviindukcijos srovė priešinasi ją
+  sukėlusios srovės kitimui.}
 \end{align*}
 čia:
 \begin{description}
   \item[$\sigma$] – savitasis laidumas;
 \end{description}
 
-\section{Sukūrinės Fuko srovės}
+\subsection{Sukūrinės Fuko srovės}
 
 Jei laidininkas nėra plonas, pavyzdžiui kokio nors metalo gabalas, tai jame
-gali susidaryti sukūrinės srovės.
+gali susidaryti sukūrinės srovės. Jų stiprumas:
 \begin{align*}
-  I_{s} &=& \frac{E_{s}}{R} \\
-  &=& - \frac{1}{R} \frac{d \Phi}{dt}
+  I_{s} &= \frac{E_{s}}{R} \\
+  &= - \frac{1}{R} \frac{d \Phi}{dt}
 \end{align*}
+FIXME: Prie ko šita formulė?
 
-\section{Srovės stiprio priklausomybė nuo laiko}
+\emph{Paviršinis efektas (skinefektas):} Didelio dažnio srovė teka tik
+laidininko paviršiumi. TODO: Paaiškinti kodėl.
 
-\begin{align*}
-  \frac{d I}{E - I R} &=& \frac{1}{L} dt
-\end{align*}
-Tarę, kad $E, R, L$ yra konstantos, integruojame:
-\begin{align*}
-  \ln \left( E - IR \right) &=& - \frac{R}{L}t + \ln C
-\end{align*}
-Potencijuojame:
-\begin{align*}
-  E - IR &=& C \cdot e^{-\frac{R}{L}t}
-\end{align*}
+Dėl šių priežasčių, vietoj to kad būtų gaminami stori vientisi laidininkai,
+gaminami „supinti“ iš plonų laidelių.
 
-Kai $t = 0$, tada $I = I_{0}$. Tada $C = E - IR$. Gauname:
+\subsection{Srovės stiprio priklausomybė nuo laiko}
+
+Anksčiau gavome, kad srovės stiprio kitimas išreiškiamas formule:
 \begin{align*}
-  I &=& I_{0}e^{-\frac{R}{L}t} + \frac{E}{R}
+  I
+    &= \frac{1}{R} \left( E - L \frac{d I}{d t} \right) \\
+  \intertext{ją pertvarkome:}
+  I \cdot R
+    &= E - L \frac{dI}{dt} \\
+  L \frac{dI}{dt}
+    &= E - IR \\
+  \frac{d I}{E - I R} &= \frac{1}{L} dt \\
+  \intertext{tarę, kad $E, R, L$ yra konstantos, integruojame:}
+  - \frac{\ln\left( E - IR \right)}{R}
+    &= \frac{t}{L} - \ln C \\
+  \ln \left( E - IR \right)
+    &= - \frac{R}{L}t + \ln C \\
+    &= \ln e^{-\frac{R}{L}t} + \ln C \\
+    &= \ln \left( C \cdot e^{-\frac{R}{L}t} \right) \\
+  E - IR
+    &= C \cdot e^{-\frac{R}{L}t}
+  \intertext{kai $t = 0$, tada $I = I_{0}$ ir iš to seka, kad
+  $C = E - I_{0}R$.  Įrašę atgal į formulę, gauname:}
+  E - IR
+    &= \left( E - I_{0}R \right) e^{-\frac{R}{L}t} \\
+    &= E e^{-\frac{R}{L}t} - I_{0}Re^{-\frac{R}{L}t} \\
+  IR
+    &= I_{0}Re^{-\frac{R}{L}t} + E - E e^{-\frac{R}{L}t} \\
+    &= I_{0}Re^{-\frac{R}{L}t} + E \left( 1 - e^{-\frac{R}{L}t} \right) \\
+  I &= I_{0}e^{-\frac{R}{L}t} + \frac{E}{R}
     \left( 1 - e^{-\frac{R}{L}t}\right) \\
-  I &=& \frac{E}{R} \left( 1 - e^{-\frac{R}{L}t} \right)
-    & \t{Įjungimo momentu.}
+  \intertext{Taigi įjungimo momentu elektros srovės stiprio priklausomybė
+  nuo laiko apibūdinama formule:}
+  I &= \frac{E}{R} \left( 1 - e^{-\frac{R}{L}t} \right) \\
 \end{align*}
 
-\section{Savitarpio indukcija}
+\subsection{Savitarpio indukcija}
 
+Tarkime, jog turime dvi rites užmautas ant to paties žiedo.
+(TODO: Brėžinys.) Jei per pirmąją teka srovė, kurios stipris kinta
+$\frac{dI_{1}}{dt}$, tai žiede atsiranda magnetinis srautas, kurio
+stiprumas yra:
 \begin{align*}
-  E_{2} &=& -\frac{d\Phi_{21}}{dt} \\
-  &=& - L_{21} \frac{dI_{1}}{dt}
+  \frac{d \Phi}{dt}
+    &= L_{1}\frac{dI_{1}}{dt} \\
+  \intertext{jis antrojoje ritėje indukuoja elektrovarą:}
+  E_{2}
+    &= - \frac{d \Phi}{dt} \\
+    &= - L_{1}\frac{dI_{1}}{dt} \\
+  \intertext{Žinome, kad jei ritėje yra $N$ vijų, tai elektrovara}
+  E
+    &= - N \frac{d \Phi}{dt} \\
+  \intertext{Padarę prielaidą, kad energijos praradimų nėra, iš
+  simetriškumo gauname, kad:}
+  E_{1}
+    &= - N_{1} \frac{d\Phi}{dt} \\
+  E_{2}
+    &= - N_{2} \frac{d\Phi}{dt} \\
+  \frac{E_{1}}{E_{2}}
+    &= \frac{N_{1}}{N_{2}} \\
+    &= k \\
+  \intertext{gautasis $k$ vadinamas transformatoriaus transformavimo 
+  koeficientu. Kadangi laidininko išspinduliuojamas šilumos kiekis:}
+  Q &=
+    I^{2} R t
+  \intertext{tai vietoj to, kad gaminti storesnius laidus, labiau
+  apsimoka prieš perduodant didelius atstumus aukštinamaisiais
+  transformatoriais paaukštinti įtampą (taip sumažinant srovės stiprį).
+  Srovės galingumas:}
+  P &=
+    E I
 \end{align*}
 
-% INCLUDE: Brėžinį iš Audriaus sąsiuvinio. ID=#0005
+\subsection{Elektrinių ir magnetinių laukų energija}
 
+Darbas elektriniame lauke perkeliant krūvį $q$ yra lygus:
 \begin{align*}
-  e_{1} &=& - N_{1} \frac{d \Phi}{dt} \\
-  e_{2} &=& - N_{2} \frac{d \Phi}{dt}
-\end{align*}
-
-Transformatoriaus transformavimo koeficientas:
-\begin{align*}
-  \frac{e_{1}}{e_{2}} = \frac{U_{1}}{U_{2}} = \frac{N_{1}}{N_{2}} = k
-\end{align*}
-
-Laidininko išspinduliuojamas šilumos kiekis:
-\begin{align*}
-  Q &=& I^{2} R t
-\end{align*}
-
-Srovės galingumas:
-\begin{align*}
-  P &=& E I
-\end{align*}
-
-\section{Elektrinių ir magnetinių laukų energija}
-
-Darbas elektriniame lauke perkeliant krūvį:
-\begin{align*}
-  A &=& q \cdot U \\
-  q &=& C \cdot U \\
-  E_{e} &=& \int _{0} ^{Q} U \cdot dq \\
-  &=& \frac{1}{2} \frac{Q^2}{C} \\
-  E_{e} &=& \frac{1}{2} C U^{2}
+  A &=
+    q \cdot U \\
+  \intertext{kondensatoriaus krūvis, kai jo talpa yra $C$ ir įtampa
+  tarp plokštelių yra $U$:}
+  Q &=
+    C \cdot U \\
+  \intertext{kondensatoriaus elektrinio lauko energija:}
+  W_{e}
+    &= \int _{0} ^{Q} U \cdot dq \\
+    &= \frac{1}{2} \frac{Q^2}{C} \\
+    &= \frac{1}{2} C U^{2} \\
 \end{align*}
 
 Atliktas darbas srovei stiprėjant nuo 0 iki $I$:
 \begin{align*}
-  P &=& I L \frac{dI}{dt} \\
-  \int d E_{m} &=& \int d A \\
-  &=& \int P dt \\
-  &=& \int _{0} ^{I} L I dI \\
-  E_{m} &=& \frac{1}{2} L I^{2}
+  A
+    &= \int P dt \\
+  \intertext{čia $P$ yra galia, kuri yra lygi:}
+  P
+    &= E I \\
+    &= I\left( - \frac{d\Phi}{dt} \right) \\
+    &= I\left( -L \frac{dI}{dt} \right) \\
+  \intertext{$-$ tiesiog rodo priešingą kryptį, todėl skaičiuodami galią
+  galime ją ignoruoti:}
+  P
+    &= IL \frac{dI}{dt} \\
+  \intertext{Magnetinio lauko energija $W_{m}$ yra lygi visam atliktam
+  darbui:}
+  W_{m}
+    &= A \\
+    &= \int P dt \\
+    &= \int_{0}^{I} LI dI \\
+    &= \frac{LI^{2}}{2} \\
 \end{align*}
 
 \chapter{Kintamoji srovė}
