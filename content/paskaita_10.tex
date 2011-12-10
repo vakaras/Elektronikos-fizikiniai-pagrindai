@@ -1,0 +1,75 @@
+\subsection{Slinkties srovė}
+
+Kintama srovė tekanti tarp kondensatoriaus plokštelių yra vadinama
+slinkties srove:
+\begin{align*}
+  j &= \varepsilon \varepsilon_{0} \frac{\delta E}{\delta t} \\
+\end{align*}
+
+\subsection{Galia}
+
+\begin{align*}
+  S
+  &= \sqrt{\left( U_{a}I \right)^{2} +
+    \left( U_{r}I \right)^{\frac{1}{2}}}
+\end{align*}
+čia:
+\begin{description}
+  \item[$S$] – pilnoji galia;
+  \item[$U_{r}$] – reaktyvinė įtampa;
+  \item[$U_{a}$] – aktyvinė įtampa.
+\end{description}
+
+
+% INCLUDE: 
+
+Kadangi visi sujungti nuosekliai, tai srovės stipris visose dalyse
+yra lygus (pažymėkime $I$). Kadangi kondensatoriuje įtampa atsilieka
+nuo srovės stiprio, per $\frac{\pi}{2}$, atidedame $U_{C}$. Ritėje
+įtampa aplenkia srovės stiprį per $\frac{\pi}{2}$, atidedame $U_{L}$.
+Paprastoje varžoje fazių poslinkio nėra, pažymime $U_{R}$. Atstojamoji
+grandinės $U$ bus lygi vektorinei $U_{C}$, $U_{L}$ ir $U_{R}$ sumai.
+
+Srovės laidumas:
+\begin{align*}
+  I
+  &= \frac{U}{Z} \\
+  &= G \cdot U \\
+\end{align*}
+
+\subsection{Kompleksiniai skaičiai}
+
+Kompleksinių skaičių žymėjimai:
+\.{a}, $a$ (su brūkšniuku viršuje, arba apačioje), \textbf{a}. FIXME
+
+\begin{align*}
+  a
+  &= a \cos \varphi + ja \sin \varphi \\
+  &= a (\cos \varphi + j \sin \varphi) \\
+\end{align*}
+
+Algebrinė kompleksinio skaičiaus forma:
+\begin{align*}
+  a &= a' + j a'' \\
+\end{align*}
+čia:
+\begin{description}
+  \item[$a'$] – projekcija realiojoje ašyje ($a' = a \cos \varphi$);
+  \item[$a''$] – projekcija menamojoje ašyje ($a'' = a \sin \varphi$).
+\end{description}
+
+Kompleksinių skaičių daugyba:
+\begin{align*}
+  a \cdot b
+  &= a e^{j\varphi} \cdot b e^{j\alpha} \\
+  \begin{cases}
+    \sin \varphi = \frac{e^{j\varphi} - e^{-j\varphi}}{2j} \\
+    \cos \varphi = \frac{e^{j\varphi} + e^{-j\varphi}}{2} \\
+  \end{cases} \\
+\end{align*}
+
+Pavyzdys su nuoseklia grandinė, kur srovės stipris yra $I_{0}$:
+\begin{equation*}
+  I_{0} R + I_{0} j \omega L + I_{0} \frac{1}{j \omega C} =
+  I_{0} R + I_{0} j \left( \omega L - \frac{1}{\omega C} \right)
+\end{equation*}

@@ -1,0 +1,105 @@
+
+% INCLUDE brėžinys.
+
+Išėjimo darbas (išlaisvinimo darbas) – jį atlieka elektronas keliaudamas
+iš metalo „į laisvę“.
+
+Kontaktinis potencialų skirtumas (KPS): $\Delta \varphi$. (Potencialų
+skirtumas tarp išlaisvintų elektronų ir medžiagoje atsiradusių jonų.)
+
+\begin{align*}
+  \Delta \varphi &= \frac{A}{|e|} \\
+\end{align*}
+čia:
+\begin{description}
+  \item[$A$] – išlaisvinimo darbas, matuojamas $eV$.
+\end{description}
+
+\begin{defn}[Pirmas kontaktinio potencialų skirtumo dėsnis]
+  Tarp dviejų skirtingų metalų idealiu atveju KPS priklauso tik nuo
+  metalų prigimties ir temperatūros.
+\end{defn}
+
+\begin{defn}[Antras kontaktinio potencialų skirtumo dėsnis]
+  Nuosekliai sujungus skirtingų metalų laidininkus, kurių temperatūra
+  vienoda, KPS tarp jų galų nepriklauso nuo tarpinių ir yra lygi
+  kraštinių KPS.
+\end{defn}
+
+Priežastys dėl ko atsiranda KPS:
+\begin{enumerate}
+  \item skirtingas išlaisvinimo darbas
+    $\Delta \varphi_{12}' = \frac{|A_{1}| - |A_{2}|}{l}$
+    ($\Delta \varphi' ~ 1 V$);
+  \item skirtingos laisvų elektronų koncentracijos (jei $n_{1} > n_{2}$,
+    tai iš metalo turinčio $n_{1}$ daugiau difunduos į medžiagą
+    turinčią $n_{2}$)
+  \begin{equation*}
+    \Delta \varphi''_{12} = \frac{kT}{e}\ln\frac{n_{1}}{n_{2}}
+  \end{equation*}
+  ;
+\end{enumerate}
+
+\subsection{Termoelementai}
+
+Panagrinėkime atvejį, kai $n_{1} > n_{2}$ ir $T_{a} > T_{b}$.
+\begin{align*}
+  E_{T}
+  &= \Delta \varphi_{12a}'' + \Delta \varphi_{12b} \\
+  &= \frac{kT_{a}}{e}\ln\frac{n_{1}}{n_{2}} +
+    \frac{kT_{b}}{e}\ln\frac{n_{2}}{n_{1}} \\
+  &= \frac{k}{l} \left( T_{a} - T_{b} \right) \ln \frac{n_{1}}{n_{2}} \\
+  &= \alpha (T_{a} - T_{b}) \\
+\end{align*}
+čia:
+\begin{description}
+  \item[$E_{T}$] – termo elektrovara;
+  \item[$\alpha$] – savitoji termo elektrovara, kuri susidaro esant
+    1 laipsnio temperatūrų skirtumui.
+\end{description}
+
+Kai $\Delta T \equiv 100^{o}C$, tai $E_{T} ~ (1-4)mV$.
+
+Vienas iš pritaikymų – termometrų gamyba. Kitas – Pentjė reiškinys
+šaldytuvų gamybai.
+
+\subsection{Kietų kūnų juostinės teorijos modelis}
+
+Pagal Pouli principą…
+
+Elektronas gali būti tik tam tikrose orbitose (lygmenyje).
+
+Pažymėkime juostas raide $A$, o tarpus – $B$. $A$ – leidžiamos energijos
+juostos, o $B$ – draudžiamos energijos juostos.
+
+Valentinė juosta – juosta, kurioje yra valentiniai elektronai.
+
+Metaluose laidumo ir valentinė juostos persidengia.
+
+Jei šiluminio laidumo energijos nepakanka, kad elektronas pereitų
+iš valentinės juostos į laidumo, tai medžiaga yra jau ne puslaidininkis,
+o dielektrikas.
+
+Puslaidininkiai būna elektroninio laidumo ir skylinio laidumo.
+
+Elektronų generacija – elektronų perėjimas iš valentinės juostos į
+laisvąją.
+
+Elektronų rekombinacija – elektronų perėjimas iš laisvosios juostos į
+valentinę.
+
+Laidumas gali būti savasis (silicis, germanis…) ir priemaišinis.
+
+Silicio kristalas su fosforo (donorinėmis) priemaišomis – n tipo
+puslaidininkis.
+
+Silicio kristalas su boro (akceptorinėmis) priemaišomis – p tipo
+puslaidininkis.
+
+Puslaidininkių laidumo priklausomybė nuo temperatūros:
+\begin{align*}
+  \vec{j} &= \underbrace{e n \mu}_{\sigma} \vec{E} \\
+\end{align*}
+
+Puslaidininkinis termo elementas. Kaitinant galą $n_{1} > n_{2}$, todėl
+difusijos elektronai lekia į ten kur mažesnis tankis (ten kur šalčiau).

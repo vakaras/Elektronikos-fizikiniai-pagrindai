@@ -1,0 +1,61 @@
+\subsection{pn riba}
+
+Suglauskime elektroninį ir skylinį puslaidininkius. Elektronai iš n
+pereis į p tipo, ten kur jų koncentracija yra gerokai mažesnė.
+
+Dėl jonų atsiradęs elektrinis laukas trukdo tolesniam elektronų ir
+skylių migravimui. Susidaro dinaminė pusiausvyra. Susidaro potencinis
+sluoksnis – potencinis barjeras, kurio varža yra didelė. Jo plotis
+nuo $10^{-8}$m iki $10^{-5}$m.
+
+Prie p tipo prijunkime baterijos $-$. Išoriniu lauku barjerą padidiname
+dar.
+
+Prie p tipo prijunkime baterijos $+$. Barjeras sumažėja, o dar padidinus
+šaltinio galingumą, srovė pradeda tekėti laisvai.
+
+TODO: Stabilitronai.
+
+Dvipolis tranzistorius.
+\begin{description}
+  \item[Emiteris] – priemaišų koncentracija yra didžiausia, didžiausio
+    laidumo;
+  \item[Bazė] – priemaišų koncentracija pati mažiausia;
+  \item[Kolektorius] – priemaišų koncentracija mažesnė nei emiteryje, bet
+    didesnė nei kolektoriuje.
+\end{description}
+
+Skylių koncentracija bazėje yra nedidelė.
+
+Jei Emiterio srovę pažymėsime:
+\begin{align*}
+  I_{E} &= I_{C} + I_{B} \\
+  \intertext{Iš fakto, kad $I_{B} << I_{C}$}
+  I_{E} &\approx I_{C} \\
+\end{align*}
+
+Tranzistorius yra elektriškai valdoma varža.
+
+Srovės perdavimo koeficientas:
+\begin{align*}
+  \beta &= \frac{\Delta I_{C}}{\Delta I_{B}} \\
+\end{align*}
+Paprastai $\beta$ nuo 20 iki 200. (Mikroschemose iki 5000.)
+
+Įėjimo charakteristika:
+\begin{align*}
+  I_{B} &= f(U_{BE}) \\
+\end{align*}
+
+Išėjimo charakteristika:
+\begin{align*}
+  I_{C} &= f(U_{CE}) \\
+  I_{B} &= const \\
+\end{align*}
+
+Laukinis tranzistorius. TODO:
+\begin{description}
+  \item[D] – santaka;
+  \item[S] – ištaka;
+  \item[G] – užtara.
+\end{description}
