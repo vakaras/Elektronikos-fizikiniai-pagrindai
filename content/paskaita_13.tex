@@ -1,61 +1,116 @@
-\subsection{pn riba}
+\section{$p-n$ riba}
 
-Suglauskime elektroninį ir skylinį puslaidininkius. Elektronai iš n
-pereis į p tipo, ten kur jų koncentracija yra gerokai mažesnė.
+Suglauskime elektroninį ir skylinį puslaidininkius. Elektronai iš $n$
+pereis į $p$ tipo, ten kur jų koncentracija yra gerokai mažesnė. Jie
+difunduodami palieka teigiamai įelektrintus jonus (donorinės priemaišos).
+Analogiškai iš $p$ į $n$ difunduoja skylės, taip palikdamos neigiamai
+įelektrintus jonus. Dėl jonų atsiranda elektrinis laukas ir trukdo
+tolesniam elektronų ir skylių migravimui. Taip pat riboje susidaro
+dvigubas elektrinis sluoksnis, kuriame nėra nei laisvų elektronų, nei
+laisvų skylių. Jo varža didelė, storis gali būti nuo $10^{-8}m$
+iki $10^{-5}m$ – jis vadinamas užtveriamuoju. $p-n$ ribos elektrinis
+laukas trukdo pereiti pagrindiniams krūvininkams (elektronams iš
+$n$ į $p$ ir skylėms iš $p$ į $n$) ir padeda pereiti nepagrindiniams
+(elektronams iš $p$ į $n$ ir skylėms iš $n$ į $p$). Susidaro dinaminė
+pusiausvyra.
 
-Dėl jonų atsiradęs elektrinis laukas trukdo tolesniam elektronų ir
-skylių migravimui. Susidaro dinaminė pusiausvyra. Susidaro potencinis
-sluoksnis – potencinis barjeras, kurio varža yra didelė. Jo plotis
-nuo $10^{-8}$m iki $10^{-5}$m.
+Prie $p$ prijunkime baterijos $-$, o prie $n$ – $+$. Išorinis laukas bus
+tokios pačios krypties, kaip ir vidinis. Užtveriamojo sluoksnio storis
+dar padidės. Išorinis laukas pagrindinius krūvininkus ištrauks, o
+ne pagrindinių yra mažai ir srovė tekės maža.
 
-Prie p tipo prijunkime baterijos $-$. Išoriniu lauku barjerą padidiname
-dar.
+Dabar prie $p$ tipo prijunkime baterijos $+$, o prie $n$ – $-$. Riba
+yra papildoma krūvininkais, ji siaurėja, varža mažėja, pagrindiniai
+krūvininkai laisvai praeina ribą – srovė teka laisvai.
 
-Prie p tipo prijunkime baterijos $+$. Barjeras sumažėja, o dar padidinus
-šaltinio galingumą, srovė pradeda tekėti laisvai.
+\subsection{$p-n$ sandūros diodai}
+
+\begin{defn}[Diodas]
+  Diodą sudaro puslaidininkyje suformuota $p-n$ sandūra ir elektrodų
+  išvadai nuo $p$ ir $n$ sričių.
+\end{defn}
+
+TODO: Papildyti iš dėstytojo konspekto.
+
+TODO: Voltamperinės charakteristikos brėžinys su paaiškinimais.
 
 TODO: Stabilitronai.
 
-Dvipolis tranzistorius.
+\subsection{Dvipolis tranzistorius}
+
+\begin{defn}[Dvipolis tranzistorius]
+  Skirtingo laidumo sričių struktūra, turinti dvi $p-n$ sandūras.
+\end{defn}
+
 \begin{description}
   \item[Emiteris] – priemaišų koncentracija yra didžiausia, didžiausio
     laidumo;
-  \item[Bazė] – priemaišų koncentracija pati mažiausia;
+  \item[Bazė] – laidumo tipas skiriasi, nuo kraštinių sričių, o priemaišų
+    koncentracija yra pati mažiausia;
   \item[Kolektorius] – priemaišų koncentracija mažesnė nei emiteryje, bet
     didesnė nei kolektoriuje.
 \end{description}
 
-Skylių koncentracija bazėje yra nedidelė.
+Bazės storis yra daug mažesnis už krūvininkų difuzijos nuotolį:
+$\delta_{B} = 100 \mu m$ pavieniame tranzistoriuje ir $~0,1 \mu m$
+integrinės mikroschemos tranzistoriuje.
 
-Jei Emiterio srovę pažymėsime:
+Abiejų $p-n$ sandūrų tiesioginės kryptys yra priešingos: $n-p-n$
+tipo tranzistoriaus yra $B \to E$ ir $B \to C$, o $p-n-p$ –
+$E \to B$ ir $C \to B$. Sutartiniuose ženkluose emiterio rodyklė yra
+nukreipta $B-E$ sandūros tiesiogine kryptimi (iš $p$ į $n$).
+
+TODO: Brėžinys iš dėstytojo konspektų.
+Dėl plonos bazės tik $1-5\%$ elektronų bazėje rekombinuoja, o likusius
+surenka kolektorius. Skyles (bazėje) rekombinuojančias su elektronais
+atstato baterija. Kol $U_{BE} = 0$, sandūroje $BE$ srovė neteka. Kadangi
+$U_{CE}$ yra atgalinė $BC$ sandūros įtampa, tai ir kolektoriaus
+grandinėje srovė neteka.
+
+Paduokime į bazę teigiamą potencialą, ši įtampa $U_{BE}$ yra tiesioginė
+sandūros $BE$ įtampa, todėl iš $E$ į $B$ pradeda tekėti elektronai
+(pagrindiniai) ir didelė dalis yra surenkama kolektoriaus, kadangi
+$U_{CB} > 0$ ir $U_{CB} >> U_{BE}$. Jei Emiterio srovę pažymėsime $I_{E}$:
 \begin{align*}
   I_{E} &= I_{C} + I_{B} \\
-  \intertext{Iš fakto, kad $I_{B} << I_{C}$}
-  I_{E} &\approx I_{C} \\
+  \intertext{iš fakto, kad $I_{B} << I_{C}$}
+  I_{E} &\approx I_{C}. \\
 \end{align*}
+Taigi, bazės grandinės srove valdome kolektoriaus srovę. Priklausomybė
+$I_{C} = f(I_{B})$ yra vadinama \emph{perdavimo charakteristika}, o
+$\beta = \frac{\Delta I_{C}}{\Delta I_{B}}$ – srovės perdavimo
+koeficientu. Tranzistorių $\beta$ gali būti nuo 20 iki 200, o
+mikroschemose net iki 5000.
 
-Tranzistorius yra elektriškai valdoma varža.
-
-Srovės perdavimo koeficientas:
-\begin{align*}
-  \beta &= \frac{\Delta I_{C}}{\Delta I_{B}} \\
-\end{align*}
-Paprastai $\beta$ nuo 20 iki 200. (Mikroschemose iki 5000.)
-
-Įėjimo charakteristika:
+Kai $U_{CE} = const$, įėjimo charakteristika:
 \begin{align*}
   I_{B} &= f(U_{BE}) \\
 \end{align*}
+TODO: Brėžinys iš dėstytojo konspektų.
 
-Išėjimo charakteristika:
+Kai $I_{B} = const$, išėjimo charakteristika:
 \begin{align*}
   I_{C} &= f(U_{CE}) \\
-  I_{B} &= const \\
 \end{align*}
+TODO: Brėžinys iš dėstytojo konspektų.
 
-Laukinis tranzistorius. TODO:
+Iš brėžinių matome, kad kolektoriaus soties srovė nepriklauso nuo
+įtampos $U_{CE}$, o priklauso tik nuo $I_{B}$.
+
+Kiekvieną tranzistorių galima laikyti valdomu netiesiniu rezistoriumi,
+kurio voltamperinės charakteristikos (išėjimo) yra keičiamos bazės
+srove. Kitaip tariant, tranzistorius yra elektriškai valdoma varža.
+
+\subsection{Lauko tranzistorius}
+
+Lauko tranzistorius yra tranzistorius, kurio srovė yra valdoma
+potencialu.
+
+TODO: Brėžiniai iš dėstytojo konspektų.
+
+TODO:
 \begin{description}
   \item[D] – santaka;
   \item[S] – ištaka;
-  \item[G] – užtara.
+  \item[G] – užtūra.
 \end{description}
