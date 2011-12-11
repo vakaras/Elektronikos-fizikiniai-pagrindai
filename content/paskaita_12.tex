@@ -1,19 +1,30 @@
+\section{Kietųjų kūnų juostinis modelis}
+
+\subsection{Kontaktinis potencialų skirtumas}
+
+Greičiausiai judantys elektronai nuolat išlekia į aplinką ir arti
+laidininko paviršiaus (per kelis tarpatominius atstumus) debesėlį.
+Dėl to metale atsiranda teigiamų krūvių, kurie su debesėliu sudaro
+dvigubą elektrinį sluoksnį, primenantį plokščią kondensatorių.
+Išlėkdamas iš metalo į vakuumą, elektronas atlieka vadinamąjį
+išlaisvinimo darbą (turi įveikti dvigubo sluoksnio elektrinį
+lauką). Potencialų skirtumas dvigubo sluoksnio elektriniame lauke
+$\Delta \varphi$ vadinamas kontaktiniu potencialų skirtumu (KPS)
+tarp metalo ir gaubiančios aplinkos:
+\begin{equation*}
+  \Delta \varphi = \frac{A}{|e|}
+\end{equation*}
+Čia darbas $A$ matuojamas $eV$. $A$ svyruoja kelių $eV$ ribose ir
+priklauso nuo metalo prigimties, temperatūros, paviršiaus būsenos.
 
 % INCLUDE brėžinys.
 
-Išėjimo darbas (išlaisvinimo darbas) – jį atlieka elektronas keliaudamas
-iš metalo „į laisvę“.
-
-Kontaktinis potencialų skirtumas (KPS): $\Delta \varphi$. (Potencialų
-skirtumas tarp išlaisvintų elektronų ir medžiagoje atsiradusių jonų.)
-
-\begin{align*}
-  \Delta \varphi &= \frac{A}{|e|} \\
-\end{align*}
-čia:
-\begin{description}
-  \item[$A$] – išlaisvinimo darbas, matuojamas $eV$.
-\end{description}
+Sujungus du skirtingus metalus analogiškai susidaro dvigubas ribinis
+įelektrintas sluoksnis ir metalai įgauna skirtingus potencialus
+$\varphi_{1}$ ir $\varphi_{2}$
+($\Delta \varphi = \varphi_{1} - \varphi_{2}$). Aleksandras Volta
+(itališkai Alessandro Giuseppe Antonio Anastasio Volta) 1785 metais
+nustatė du dėsnius.
 
 \begin{defn}[Pirmas kontaktinio potencialų skirtumo dėsnis]
   Tarp dviejų skirtingų metalų idealiu atveju KPS priklauso tik nuo
@@ -30,17 +41,24 @@ Priežastys dėl ko atsiranda KPS:
 \begin{enumerate}
   \item skirtingas išlaisvinimo darbas
     $\Delta \varphi_{12}' = \frac{|A_{1}| - |A_{2}|}{l}$
-    ($\Delta \varphi' ~ 1 V$);
+    ($\Delta \varphi' \sim 1 V$) – ši priežastis vadinama vidiniu KPS;
   \item skirtingos laisvų elektronų koncentracijos (jei $n_{1} > n_{2}$,
     tai iš metalo turinčio $n_{1}$ daugiau difunduos į medžiagą
     turinčią $n_{2}$)
   \begin{equation*}
-    \Delta \varphi''_{12} = \frac{kT}{e}\ln\frac{n_{1}}{n_{2}}
+    \Delta \varphi''_{12} = \frac{kT}{e}\ln\frac{n_{1}}{n_{2}},
   \end{equation*}
-  ;
+  čia:
+  \begin{description}
+    \item[$k$] – Bolcmano konstanta;
+    \item[$T$] – absoliutinė temperatūra.
+  \end{description}
+  (Ši priežastis vadinama vidine KPS.)
 \end{enumerate}
 
 \subsection{Termoelementai}
+
+TODO: Sutvarkyti šį skyrelį pagal dėstytojo konspektą.
 
 Panagrinėkime atvejį, kai $n_{1} > n_{2}$ ir $T_{a} > T_{b}$.
 \begin{align*}
@@ -65,41 +83,108 @@ Vienas iš pritaikymų – termometrų gamyba. Kitas – Pentjė reiškinys
 
 \subsection{Kietų kūnų juostinės teorijos modelis}
 
-Pagal Pouli principą…
+TODO: Brėžinys.
 
-Elektronas gali būti tik tam tikrose orbitose (lygmenyje).
+Elektrono energija atome yra kvantuota. Pagal Volfgango Ernsto Paulio
+(vokiškai Wolfgang Ernst Pauli) draudimo principą viename lygmenyje
+gali būti ne daugiau, kaip du elektronai su skirtingais
+(antilygiagrečiais) sukiniais.
 
-Pažymėkime juostas raide $A$, o tarpus – $B$. $A$ – leidžiamos energijos
-juostos, o $B$ – draudžiamos energijos juostos.
+Atomams suartėjus jie vienas kitą veikia ir pasikeičia jų elektronų
+energijos lygmenys. Atsiranda $N$ artimų, bet jau nesutampančių lygmenų,
+energijos lygmuo suskyla į $N$ lygmenų ir sudaro juostą (zoną).
+Labiausiai suskyla valentinių elektronų ir aukštesni lygmenys bei
+skildami sudaro leistiną elektronų energijos juostą (kelių $eV$ pločio).
+Tarpai (pažymėkime juos $B$) tarp leistinų energijos juostų (pažymėkime
+jas $A$) vadinami draustinėmis energijos juostomis. $B$ plotis gali
+būti nuo dešimtųjų $eV$ iki kelių $eV$. Valentiniais elektronais
+užpildyta juosta (visiškai arba dalinai) vadinama valentine juosta.
+Gretima aukštesnės energijos juosta (tuščia, arba dalinai užpildyta
+elektronais) vadinama laidumo juosta.
 
-Valentinė juosta – juosta, kurioje yra valentiniai elektronai.
+Metaluose laidumo ir valentinė juostos persidengia, todėl elektronams
+lengva pereiti iš valentinės juostos į laidumo juostą. Puslaidininkiuose
+valentinė juosta yra visiškai užpildyta ir elektronas be papildomos
+energijos negali patekti į laidumo juostą. Jei šiluminio laidumo
+energijos nepakanka, kad elektronas pereitų iš valentinės juostos į
+laidumo, tai medžiaga yra jau ne puslaidininkis, o dielektrikas.
 
-Metaluose laidumo ir valentinė juostos persidengia.
+\subsection{Puslaidininkiai}
 
-Jei šiluminio laidumo energijos nepakanka, kad elektronas pereitų
-iš valentinės juostos į laidumo, tai medžiaga yra jau ne puslaidininkis,
-o dielektrikas.
+Puslaidininkių savitoji varža gali būti nuo $10^{-5} \Omega \cdot m$
+iki $10^{8} \Omega \cdot m$ ir skirtingai nei metaluose ji kylant
+temperatūrai mažėja.
 
-Puslaidininkiai būna elektroninio laidumo ir skylinio laidumo.
+Kai kurių puslaidininkių aktyvacijos energija:
+\begin{itemize}
+  \item $Sb$ – $0,12 eV$,
+  \item $Te$ – $0,36 eV$,
+  \item $Ge$ – $0,75 eV$,
+  \item $Si$ – $1,1 eV$,
+  \item $As$ – $1,2 eV$,
+  \item $P$  – $1,5 eV$,
+  \item $Se$ – $1,7 eV$,
+  \item $S$  – $2,5 eV$.
+\end{itemize}
+Taip pat puslaidininkiams priklauso daug junginių: $Cu_{2}O, PbS, CdSe$,
+$As_{2}Se_{3},\ldots,CdS$.
 
-Elektronų generacija – elektronų perėjimas iš valentinės juostos į
-laisvąją.
+Savasis puslaidininkių laidumas gali būti dvejopas: elektroninis ir
+skylinis. Su laidumu susijusios dvi sąvokos:
+\begin{description}
+  \item[elektronų generacija] – elektronų perėjimas iš valentinės
+    juostos į laisvąją;
+  \item[elektronų rekombinacija] – elektronų perėjimas iš
+    laisvosios juostos į valentinę.
+\end{description}
 
-Elektronų rekombinacija – elektronų perėjimas iš laisvosios juostos į
-valentinę.
+TODO: Brėžinys.
 
-Laidumas gali būti savasis (silicis, germanis…) ir priemaišinis.
+\subsubsection{Priemaišinis laidumas}
 
-Silicio kristalas su fosforo (donorinėmis) priemaišomis – n tipo
-puslaidininkis.
+Be savojo puslaidininkinio laidumo, dar yra ir priemaišinis.
+Puslaidininkiai, kuriuose priemaišos atomams sudarius ryšį su
+puslaidininkio atomais lieka nesurištų elektronų, vadinami
+elektroninio laidumo, arba kitaip $n$ tipo puslaidininkiais.
+Atitinkamai priemaišos vadinamos donorinėmis. Pavyzdžiui,
+jei germanio, kuris turi keturis valentinius elektronus, atomą
+pakeisime penkiavalenčiu fosforo atomu, tai 4 jo valentiniai
+elektronai bus surišti su gretimais germanio atomais, o penktas
+elektronas ryšyje nedalyvaus – bus silpnai surištas su branduoliu
+ir lengvai galės pereiti į laidumo juostą. Šis penktojo elektrono
+lygmuo yra draustinėje juostoje arčiau laidumo juostos ir yra
+vadinamas donoriniu lygmeniu. TODO: Brėžinys.
 
-Silicio kristalas su boro (akceptorinėmis) priemaišomis – p tipo
-puslaidininkis.
+Atitinkamai puslaidininkai, kuriuose priemaišos atomams sudarant
+ryšį su puslaidininkio atomais trūksta elektronų, vadinami skylinio
+laidumo, arba kitaip $p$ tipo puslaidininkiais. Šiuo atveju
+priemaišos vadinamos akceptorinėmis. Pavyzdžiui, jei germanio
+atomą pakeisime trivalenčiu boro atomu, tai jam kovalentinio
+ryšio sudarymo truks vieno elektrono, kurį jis pasiims iš gretimo
+germanio atomo, kuriame tuo tarpu atsiras „teigiama“ skylė.
+Akceptoriniai – elektronų neužpildyti nauji energijos lygmenys –
+išsidėsto arčiau valentinės juostos draudžiamų energijų juostoje.
+Iš užpildytos valentinės juostos elektronai lengvai peršoka
+į akceptorinį lygmenį, o valentinėje juostoje atsiranda skylė.
+Taigi valentinė juosta tampa skylinio laidumo juosta.
 
-Puslaidininkių laidumo priklausomybė nuo temperatūros:
-\begin{align*}
-  \vec{j} &= \underbrace{e n \mu}_{\sigma} \vec{E} \\
-\end{align*}
+\subsubsection{Puslaidininkių laidumo priklausomybė nuo temperatūros}
 
-Puslaidininkinis termo elementas. Kaitinant galą $n_{1} > n_{2}$, todėl
-difusijos elektronai lekia į ten kur mažesnis tankis (ten kur šalčiau).
+Grynas puslaidininkis $0K$ temperatūroje yra izoliatorius. Metalų
+elektrinis laidumas, pakėlus temperatūra 1 laipsniu $[273K;373K]$
+intervale, sumažėja nuo $0,3 \%$ iki $0,4\%$, o puslaidininkių
+padidėja nuo $3\%$ iki $6\%$ kiekvienam laipsniui.
+
+Puslaidininkinis termoelementas. TODO: Brėžinys. Tarkime, kad turime $n$
+tipo puslaidininkį, kurio vieną galą kaitiname. Kaitinamoje vietoje
+atsiranda laisvų elektronų, kurie difunduoja į šaltesnįjį galą, nes
+jame yra mažiau laisvų elektronų. Šildomas galas įsielektrina $+$,
+o nešildomas $-$ – atsiranda termo evj
+$E = \alpha (T_{\t{k}} - T_{\t{š}})$.
+\begin{note}
+  Kaitinant $p$ puslaidininkį (skylinį) jis įsielektrins priešingai.
+\end{note}
+Metaluose tokio efekto negauname, nes elektronų koncentracija juostose
+iš esmės nepriklauso nuo temperatūros.
+
+TODO: Papildyti iš konspekto.
