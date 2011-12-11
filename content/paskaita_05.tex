@@ -298,3 +298,92 @@ Elektromagnetiniame lauke judantį krūvį veikianti jėga:
     B &= \frac{\mu_{0} \mu}{2 \pi} \frac{I}{r_{0}}
   \end{align*}
 \end{exmp}
+
+\begin{exmp}
+  \emph{Sąlyga.} Elektronas, kurio greitis yra $2 \cdot 10^{6} m/s$,
+  įlekia į magnetinį lauką, kurio magnetinė indukcija $B = 0,03T$,
+  kampu lygiu $\frac{\pi}{6}$. Rasti elektrono orbitos spindulį $r$
+  ir poslinkį $h$ padarytą per vieną apsisukimą.
+
+  Duota:
+  \begin{align*}
+    \alpha &= \frac{\pi}{6} \\
+    B &= 0,03 T \\
+    v_{0} &= 2 \cdot 10^{6} m/s \\
+    e &= 1,6021773 \cdot 10^{-19} \\
+    m_{e} &= 9,1093898 \cdot 10^{-31} \\
+  \end{align*}
+
+  TODO: Brėžinys. Tarkime, kad x ašis yra nukreipta magnetinio lauko
+  linijų kryptimi ir elektrono pradinio greičio vektorius $\vec{v_{0}}$
+  priklauso plokštumai $xOy$.
+
+  Elektrono pradinis greitis susideda iš dviejų dedamųjų: $v_{0x}$ –
+  greičio išilgai magnetinio lauko linijų ir greičio $v_{0y}$ –
+  statmeno magnetinio lauko linijoms. Krūvio judančio išilgai
+  magnetinio lauko linijų, magnetinės jėgos neveikia, taigi elektrono
+  greičio $v_{x}$ dedamoji yra konstanta ir ji yra lygi $v_{0x}$.
+  Krūvį judantį statmenai magnetinio lauko linijoms veikia jėga,
+  kuri verčia krūvį suktis, o jos stiprumas yra lygus:
+  \begin{align*}
+    F
+      &= B e v_{0y} \\
+      &= B e v_{0} \sin \alpha. \\
+    \intertext{Iš antro Niutono dėsnio žinome, kad}
+    F
+      &= ma. \\
+    \intertext{Taip pat žinome, kad apskritimine trajektorija
+    skriejančio kūno pagreitį, greitį ir trajektorijos spindulį
+    sieja lygybė:}
+    a
+      &= \frac{v_{0y}^{2}}{r} \\
+      &= \frac{(v_{0} \sin \alpha)^{2}}{r}. \\
+    \intertext{Iš turimų formulių išsireiškiame $r$:}
+    ma
+      &= B e v_{0} \sin \alpha \\
+    m \frac{(v_{0} \sin \alpha)^{2}}{r}
+      &= B e v_{0} \sin \alpha \\
+    m \frac{v_{0} \sin \alpha}{r}
+      &= B e \\
+    r
+      &= \frac{m v_{0} \sin \alpha}{B e} \\
+      &\approx 0,00018952 m. \\
+    \intertext{Elektronas vieną kartą apsisuks per:}
+    T
+      &= \frac{2 \pi r}{v_{0y}} \\
+    \intertext{Ir per tą laiką nuskries:}
+    h
+      &= v_{0x} T \\
+      &= v_{0} \cos \alpha \frac{2 \pi r}{v_{0} \sin \alpha} \\
+      &= \frac{2 \pi v_{0} m \cos \alpha}{Be} \\
+      &\approx 0,00206251 m.
+  \end{align*}
+
+\end{exmp}
+
+\begin{exmp}
+  \emph{Sąlyga.} Protonas įlekia į magnetinį lauką greičiu
+  $v (v = 10^{4}m/s)$. Indukcija $B = 0,01 T$. Kampas tarp vektorių
+  $\vec{v}$ ir $\vec{B}$ yra $\frac{\pi}{3}$. Rasti protono judėjimo
+  trajektoriją ($r$ ir $h$) ir kelią nueitą per 10 mikrosekundžių.
+
+  Duota:
+  \begin{align*}
+    \alpha &= \frac{\pi}{3} \\
+    B &= 0,01 T \\
+    v_{0} &= 10^{4} m/s \\
+    q &= 1,6021773 \cdot 10^{-19} \\
+    m &= 1,6 \cdot 10^{-27} kg \\
+    t &= 10^{-5} s \\
+  \end{align*}
+
+  Analogiškai praeitam uždaviniui:
+  \begin{align*}
+    r &= \frac{m v_{0} \sin \alpha}{B e} \\
+    h &= \frac{2 \pi v_{0} m \cos \alpha}{Be} \\
+    l &= v \cdot t \\
+      &= 10^{4} \cdot 10^{-5} \\
+      &= 0,1 m.\\
+  \end{align*}
+
+\end{exmp}
